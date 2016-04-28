@@ -59,7 +59,7 @@ public class ProjectAccessRepository extends DefaultRepository{
         Connection connection = this.getConnection();
         User user = null;
         PreparedStatement preparedStatement = null;
-        ArrayList<String>result = new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
         try {
             preparedStatement = connection.prepareStatement("SELECT utilisateur.nom " +
                     "from utilisateur " +

@@ -63,33 +63,33 @@ public class NewUpdate implements Runnable {
                             select=Insert.get(5);
                             droit = Boolean.parseBoolean(Insert.get(6));
                             admin = Boolean.parseBoolean(Insert.get(7));
-                            if(type == "projet"){
+                            if(type.equals("projet")){
                                 ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
-                            if(type == "fichier"){
+                            if(type.equals("fichier") ){
                                 FileService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
                             break;
                         case "remove":
                             select=Insert.get(5);
-                            if(type == "projet"){
+                            if(type.equals("projet")){
                                 ProjectService.getInstance().removeCollaborator(pseudo, id, select);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
-                            if(type == "fichier"){
+                            if(type.equals("fichier")){
                                 FileService.getInstance().removeCollaborator(pseudo, id, select);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
                             break;
                         case "modif":
                             select=Insert.get(5);
-                            if(type == "projet"){
+                            if(type.equals("projet")){
                                 ProjectService.getInstance().updateCollaborator(pseudo, id, select);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
-                            if(type == "fichier"){
+                            if(type.equals("fichier")){
                                 FileService.getInstance().updateCollaborator(pseudo, id, select);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
