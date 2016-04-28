@@ -1,6 +1,6 @@
 package SocketLayer;
 
-import WebServices.BddRequest.Connect;
+import Services.UserService;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -14,7 +14,6 @@ public class NewConnectionThread implements Runnable {
     public ArrayList<String> auhthentification;
     private Socket socket;
 
-    public static Connect connect = new Connect();
     public NewConnectionThread(Socket socket)  {
         this.socket=socket;
     }
@@ -26,7 +25,7 @@ public class NewConnectionThread implements Runnable {
             ArrayList<String> auth = (ArrayList<String>) ois.readObject();
             System.out.println(auth);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            oos.writeObject(connect.connectionValidate(auth.get(0), auth.get(1)));
+            oos.writeObject(UserService.getInstance().Authentication(auth.get(0), auth.get(1)));
             oos.flush();
             pseudo = auth.get(0);
             password = auth.get(1);
