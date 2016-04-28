@@ -104,4 +104,8 @@ public class FileAccessRepository extends DefaultRepository{
     public void RemoveAccess(File file, User selected) {
 
     }
+
+    public void UpdateAccess(File file, User selected) {
+
+    }
 }

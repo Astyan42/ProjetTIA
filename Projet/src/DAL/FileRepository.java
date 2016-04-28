@@ -3,10 +3,8 @@ package DAL;
 import Model_Objects.File;
 import Model_Objects.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by jdeveaux on 28/04/2016.
@@ -68,5 +66,35 @@ public class FileRepository extends DefaultRepository{
             }
             return file;
 
+    }
+
+    public ArrayList<File> getFilesProjectForUser(int userId, int projectId) {
+        Connection connection = this.getConnection();
+        ArrayList<File> arraylist=new ArrayList<>();
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement( "SELECT fichier.id_fichier,fichier.id_projet,fichier.nom,fichier.chemin " +
+                    "FROM fichier, droit_fichier " +
+                    "WHERE id_util=? AND id_projet=? AND fichier.id_fichier = droit_fichier.id_fichier;");
+            preparedStatement.setInt(1, userId);
+            preparedStatement.setInt(2, projectId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+
+            ArrayList<String> resultArray;
+            while (resultSet.next()){
+                int idFic=resultSet.getInt(1);
+                int idProject=resultSet.getInt(2);
+                String name=resultSet.getString(3);
+                String chemin=resultSet.getString(4);
+
+                File file= new File(idFic,idProject,name,chemin);
+                arraylist.add(file);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arraylist;
     }
 }

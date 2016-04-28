@@ -1,11 +1,13 @@
 package DAL;
 
 import Model_Objects.Project;
+import Model_Objects.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * Created by jdeveaux on 28/04/2016.
@@ -61,4 +63,27 @@ public class ProjectRepository extends DefaultRepository{
         }
         return file;
     }
+
+    public ArrayList<Project> getProjectsForUser(int userId){
+        Connection connection = this.getConnection();
+        ArrayList<Project> arrayList= new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id_projet,nom,id_pere FROM acces_projet LEFT OUTER JOIN projet WHERE acces_projet.id_projet=projet.id_projet AND id_util=?;");
+            preparedStatement.setInt(1, userId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int id = resultSet.getInt(1);
+                String nom = resultSet.getString(2);
+                int id_pere = resultSet.getInt(3);
+                Project project = new Project(id,nom,id_pere);
+                arrayList.add(project);
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return arrayList;
+
+    }
+
 }
