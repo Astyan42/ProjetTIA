@@ -48,3 +48,5 @@ Temporary Items
 Projet/.idea/workspace.xml
 Projet/.idea/workspace.xml
 ClientLourd/.idea/workspace.xml
+*.class
+*.xml

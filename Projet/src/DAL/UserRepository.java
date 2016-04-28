@@ -5,6 +5,7 @@ import Model_Objects.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * Created by jdeveaux on 28/04/2016.
@@ -20,6 +21,7 @@ public class UserRepository extends DefaultRepository{
         }
         return _instance;
     }
+
     public User getUserByNameOrMail(String pseudo){
         Connection connection = this.getConnection();
         User user = null;
@@ -39,6 +41,20 @@ public class UserRepository extends DefaultRepository{
             e.printStackTrace();
         }
         return user;
+    }
 
+    public boolean createUser(String name, String mail, String pass){
+        try {
+            PreparedStatement preparedStatement = this.getConnection().prepareStatement("INSERT INTO utilisateur (nom,mail,password) VALUES(?,?,?);");
+
+            preparedStatement.setString( 1, name );
+            preparedStatement.setString( 2, mail );
+            preparedStatement.setString( 3, pass );
+            preparedStatement.executeUpdate();
+        } catch ( SQLException e ) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }

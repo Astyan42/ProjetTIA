@@ -23,7 +23,7 @@ public class XmlUpdateSocket extends ThreadSocketRessources implements Runnable 
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new Socket.NewXmlUpdate(socket)).start();
+                new Thread(new SocketLayer.NewXmlUpdate(socket)).start();
             }
 
         } catch (IOException e) {

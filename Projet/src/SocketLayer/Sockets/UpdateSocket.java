@@ -22,7 +22,7 @@ public class UpdateSocket extends ThreadSocketRessources implements Runnable {
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new Socket.NewUpdate(socket)).start();
+                new Thread(new SocketLayer.NewUpdate(socket)).start();
             }
 
         } catch (IOException e) {

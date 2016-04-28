@@ -22,7 +22,7 @@ public class EditeurSocket extends ThreadSocketRessources implements Runnable {
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new Socket.NewEditeur(socket)).start();
+                new Thread(new SocketLayer.NewEditeur(socket)).start();
             }
 
         } catch (IOException e) {
