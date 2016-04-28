@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE arborescence SYSTEM "dtd_arborescence.dtd">
+<arborescence>
+<projet idp="NULL" name="/">
+	<fichier idf="11" name="essai"/>
+ 	<projet idp="5" name="tres">
+	</projet>
+</projet>
+</arborescence>
