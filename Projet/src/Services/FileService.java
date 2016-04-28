@@ -15,29 +15,30 @@ public class FileService {
     private static FileService _instance;
 
     public static FileService getInstance() {
-        if(_instance == null){
+        if (_instance == null) {
             _instance = new FileService();
         }
         return _instance;
     }
-    public File addFile(String pseudo, String idProjet ,String name) {
+
+    public File addFile(String pseudo, String idProjet, String name) {
         File file = FileRepository.getInstance().add_file(idProjet, name);
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         FileAccessRepository.getInstance().InsertAdminAccess(file, user);
         return file;
     }
 
-    public ArrayList<String> getCollaborators(String pseudo, int fileId){
+    public ArrayList<String> getCollaborators(String pseudo, int fileId) {
         ArrayList<String> list = new ArrayList<String>();
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
-        FileAccessRepository.getInstance().getCollaborators(fileId,user.id);
+        FileAccessRepository.getInstance().getCollaborators(fileId, user.id);
         return list;
     }
 
-    public void addCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin){
+    public void addCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin) {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         File file = FileRepository.getInstance().getFileById(fileId);
-        if(FileAccessRepository.getInstance().isAdmin(user,file)){
+        if (FileAccessRepository.getInstance().isAdmin(user, file)) {
             FileAccessRepository.getInstance().InsertAccess(file, user, droit, admin);
         }
     }
@@ -54,7 +55,8 @@ public class FileService {
     public void updateCollaborator(String pseudo, String id, String select) {
     }
 
-    public String getFileContent(){
-        return null;
+    public ArrayList<File> getAllFiles(){
+        return FileRepository.getInstance().getFilesByFolder();
     }
+
 }

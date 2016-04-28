@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b9012bf-4286-45ec-812e-4f86dff86aa5" name="Default" comment="" />
+    <list default="true" id="5b9012bf-4286-45ec-812e-4f86dff86aa5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/SocketLayer/Sockets/ConnectionSocket.java" afterPath="$PROJECT_DIR$/../Projet/src/SocketLayer/Sockets/ConnectionSocket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Services/FileService.java" afterPath="$PROJECT_DIR$/../Projet/src/Services/FileService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Services/ProjectService.java" afterPath="$PROJECT_DIR$/../Projet/src/Services/ProjectService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/WebServices/WebService.java" afterPath="$PROJECT_DIR$/../Projet/src/WebServices/WebService.java" />
+    </list>
     <ignored path="projetTia.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />

@@ -1,4 +1,4 @@
-package Socket.Sockets;
+package SocketLayer.Sockets;
 
 import WebServices.Ressources.ThreadSocketRessources;
 
@@ -6,23 +6,23 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class UpdateSocket extends ThreadSocketRessources implements Runnable {
+public class ConnectionSocket extends ThreadSocketRessources implements Runnable {
+
     public void run() {
         int count=0;
-        try (ServerSocket serverSocket = new ServerSocket(PORT_UPDATE)) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT_CONNECT)) {
 
-            System.out.println("I'm waiting here: Update \n"+serverSocket.getLocalSocketAddress());
+            System.out.println("I'm waiting here: Connect \n"+serverSocket.getLocalSocketAddress());
 
             while (true) {
 
                 Socket socket = serverSocket.accept();
 
                 count++;
-                System.out.println("#" + count + " Update from "
+                System.out.println("#" + count + " Connect from "
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
-
-                new Thread(new Socket.NewUpdate(socket)).start();
+                new Thread(new SocketLayer.NewConnectionThread(socket)).start();
             }
 
         } catch (IOException e) {

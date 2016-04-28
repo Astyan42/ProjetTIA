@@ -1,6 +1,6 @@
 package WebServices;
 
-import Socket.Sockets.*;
+import SocketLayer.Sockets.*;
 import WebServices.Chat.Chat;
 import WebServices.Ressources.GlobalRessources;
 

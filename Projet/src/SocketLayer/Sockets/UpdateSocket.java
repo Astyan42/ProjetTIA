@@ -1,5 +1,4 @@
-package Socket.Sockets;
-
+package SocketLayer.Sockets;
 
 import WebServices.Ressources.ThreadSocketRessources;
 
@@ -7,23 +6,23 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class XmlUpdateSocket extends ThreadSocketRessources implements Runnable {
+public class UpdateSocket extends ThreadSocketRessources implements Runnable {
     public void run() {
         int count=0;
-        try (ServerSocket serverSocket = new ServerSocket(PORT_XML_UP)) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT_UPDATE)) {
 
-            System.out.println("I'm waiting here: XML \n"+serverSocket.getLocalSocketAddress());
+            System.out.println("I'm waiting here: Update \n"+serverSocket.getLocalSocketAddress());
 
             while (true) {
 
                 Socket socket = serverSocket.accept();
 
                 count++;
-                System.out.println("#" + count + " xml Update from "
+                System.out.println("#" + count + " Update from "
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new Socket.NewXmlUpdate(socket)).start();
+                new Thread(new Socket.NewUpdate(socket)).start();
             }
 
         } catch (IOException e) {

@@ -1,4 +1,4 @@
-package Socket.Sockets;
+package SocketLayer.Sockets;
 
 import WebServices.Ressources.ThreadSocketRessources;
 
