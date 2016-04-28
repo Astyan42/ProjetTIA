@@ -55,8 +55,4 @@ public class FileService {
     public void updateCollaborator(String pseudo, String id, String select) {
     }
 
-    public ArrayList<File> getAllFiles(){
-        return FileRepository.getInstance().getFilesByFolder();
-    }
-
 }
