@@ -26,4 +26,13 @@ public class UserService {
         return (user == null);
     }
 
+    public User createUser(String name, String mail, String pass){
+        User user = null;
+        if(!IsAlreadyRegistered(mail)){
+            UserRepository.getInstance().createUser(name,mail,pass);
+            user = UserRepository.getInstance().getUserByNameOrMail(mail);
+        }
+        return user;
+    }
+
 }

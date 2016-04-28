@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Model_Objects.User;
+import Services.UserService;
 import projet.beans.Utilisateur;
 
 /**
@@ -35,27 +37,26 @@ public class Inscription extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		   WebServices.BddRequest.Inscription Bdd = new WebServices.BddRequest.Inscription();
-		   List<String> messages = Bdd.inscription( request );
-		    
-	      /* Traitement de la requ�te et r�cup�ration du bean en r�sultant */
-	        Utilisateur utilisateur =new Utilisateur();
-	        /* R�cup�ration de la session depuis la requ�te */
-	        HttpSession session = request.getSession();
-	        if (Bdd.getResultat()!=0 && messages.isEmpty()) {
-	        	
-	        	utilisateur.setNom(request.getParameter( "inscription_nom" ));
-	            utilisateur.setEmail(request.getParameter( "inscription_mail" ));
-		        utilisateur.setMotDePasse(request.getParameter( "inscription_password" ));     
-	            session.setAttribute( ATT_SESSION_USER, utilisateur );
 
-	        } else {
+		String name = request.getParameter( "inscription_nom" );
+		String mail = request.getParameter( "inscription_mail" );
+		String password = request.getParameter( "inscription_password" );
 
-	            session.setAttribute( ATT_SESSION_USER, null );
-	        }
-	        request.setAttribute( "messages", messages );
-	        response.sendRedirect("Index");
+		User user = UserService.getInstance().createUser(name,mail,password);
+
+		Utilisateur utilisateur =new Utilisateur();
+		/* R�cup�ration de la session depuis la requ�te */
+		HttpSession session = request.getSession();
+		if (user != null) {
+			utilisateur.setNom(request.getParameter( "inscription_nom" ));
+			utilisateur.setEmail(request.getParameter( "inscription_mail" ));
+			utilisateur.setMotDePasse(request.getParameter( "inscription_password" ));
+			session.setAttribute( ATT_SESSION_USER, utilisateur );
+
+		} else {
+			session.setAttribute( ATT_SESSION_USER, null );
+		}
+		response.sendRedirect("Index");
 	}
 	
 	
