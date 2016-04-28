@@ -1,8 +1,8 @@
 package WebServices;
 
+import Socket.Sockets.*;
 import WebServices.Chat.Chat;
 import WebServices.Ressources.GlobalRessources;
-import WebServices.Threads.Sockets.*;
 
 import java.io.IOException;
 

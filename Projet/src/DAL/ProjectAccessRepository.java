@@ -1,5 +1,6 @@
 package DAL;
 
+import Model_Objects.File;
 import Model_Objects.Project;
 import Model_Objects.User;
 
@@ -38,6 +39,22 @@ public class ProjectAccessRepository extends DefaultRepository{
         }
     }
 
+    public void InsertAccess(Project p, User u, boolean read, boolean isAdmin){
+        Connection connection = this.getConnection();
+        User user = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement( "INSERT INTO acces_projet (id_projet,id_util,admin,lecture) VALUES (?,?,?,?);");
+            preparedStatement.setInt(1, p.id_projet);
+            preparedStatement.setInt(2, u.id);
+            preparedStatement.setBoolean(3, isAdmin);
+            preparedStatement.setBoolean(4, read);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public ArrayList<String> getCollaborators(int projectId, int userId) {
         Connection connection = this.getConnection();
         User user = null;
@@ -59,5 +76,28 @@ public class ProjectAccessRepository extends DefaultRepository{
             e.printStackTrace();
         }
         return result;
+    }
+
+    public boolean isAdmin(User u, Project p){
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("SELECT administrateur from acces_projet where id_util=? And id_fichier=?");
+            preparedStatement.setInt(1, u.id);
+            preparedStatement.setInt(2, p.id_projet);
+            int testDroit;
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                testDroit = resultSet.getInt(1);
+                if (testDroit != 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 }

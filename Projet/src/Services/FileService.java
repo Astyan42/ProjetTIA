@@ -33,4 +33,12 @@ public class FileService {
         FileAccessRepository.getInstance().getCollaborators(fileId,user.id);
         return list;
     }
+
+    public void addCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin){
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        File file = FileRepository.getInstance().getFileById(fileId);
+        if(FileAccessRepository.getInstance().isAdmin(user,file)){
+            FileAccessRepository.getInstance().InsertAccess(file,user,droit,admin);
+        }
+    }
 }

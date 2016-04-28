@@ -38,6 +38,23 @@ public class FileAccessRepository extends DefaultRepository{
         }
     }
 
+    public void InsertAccess(File f, User u, boolean write, boolean isAdmin){
+        Connection connection = this.getConnection();
+        User user = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur)VALUES (?,?,TRUE,?,?);");
+            preparedStatement.setInt(1, f.id);
+            preparedStatement.setInt(2, u.id);
+            preparedStatement.setBoolean(3, write);
+            preparedStatement.setBoolean(4, isAdmin);
+            int resultat = preparedStatement.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public ArrayList<String> getCollaborators(int fileId, int userId) {
         Connection connection = this.getConnection();
         User user = null;
@@ -59,5 +76,28 @@ public class FileAccessRepository extends DefaultRepository{
             e.printStackTrace();
         }
         return result;
+    }
+
+    public boolean isAdmin(User u, File f){
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("SELECT administrateur from droit_fichier where id_util=? And id_fichier=?");
+            preparedStatement.setString(1, String.valueOf(u.id));
+            preparedStatement.setString(2, String.valueOf(f.id));
+            int testDroit;
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                testDroit = resultSet.getInt(1);
+                if (testDroit != 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 }
