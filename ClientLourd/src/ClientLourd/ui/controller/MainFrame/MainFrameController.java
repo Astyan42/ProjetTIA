@@ -5,13 +5,14 @@ import ClientLourd.ui.Ressource;
 import ClientLourd.ui.controller.MainFrame.ArianneController;
 import ClientLourd.ui.controller.MainFrame.FileListController;
 import ClientLourd.ui.controller.MainFrame.FolderListController;
+import ClientLourd.ui.interfaces.IFolderChangeListener;
 import ClientLourd.ui.listeners.MainFrameListeners.*;
 import ClientLourd.ui.view.*;
 
 import javax.swing.*;
 
 
-public class MainFrameController extends Ressource {
+public class MainFrameController extends Ressource implements IFolderChangeListener{
     private MainFrame mainFrame;
     private JButton nouveauProjectButton;
     private JButton nouveauFicButtun;
@@ -35,6 +36,17 @@ public class MainFrameController extends Ressource {
         initListener();
         evtManager.TriggerFolderChangeEvent("/");
         mainFrame.setVisible(true);
+    }
+
+    @Override
+    public void onFolderChange(String folderURL) {
+        if (folderURL.equals("/")) {
+            collaborationButton.setEnabled(false);
+            retourButton.setEnabled(false);
+        }else {
+            collaborationButton.setEnabled(true);
+            retourButton.setEnabled(true);
+        }
     }
 
     /**
@@ -75,6 +87,7 @@ public class MainFrameController extends Ressource {
         evtManager.AddFolderChangeListener(arianneController);
         evtManager.AddFolderChangeListener(fileListController);
         evtManager.AddFolderChangeListener(folderListController);
+        evtManager.AddFolderChangeListener(this);
     }
 
 

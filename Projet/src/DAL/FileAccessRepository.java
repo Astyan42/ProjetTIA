@@ -25,9 +25,8 @@ public class FileAccessRepository extends DefaultRepository{
 
     public void InsertAdminAccess(File f, User u){
         Connection connection = this.getConnection();
-        PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur) VALUES (?,?,TRUE,TRUE,TRUE);");
+            PreparedStatement preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur) VALUES (?,?,TRUE,TRUE,TRUE);");
             preparedStatement.setInt(1, u.id);
             preparedStatement.setInt(2, f.id);
             preparedStatement.executeUpdate();
@@ -39,12 +38,10 @@ public class FileAccessRepository extends DefaultRepository{
 
     public void InsertAccess(File f, User u, boolean write, boolean isAdmin){
         Connection connection = this.getConnection();
-        User user = null;
-        PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur)VALUES (?,?,TRUE,?,?);");
-            preparedStatement.setInt(1, f.id);
-            preparedStatement.setInt(2, u.id);
+            PreparedStatement preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur)VALUES (?,?,TRUE,?,?);");
+            preparedStatement.setInt(1, u.id);
+            preparedStatement.setInt(2, f.id);
             preparedStatement.setBoolean(3, write);
             preparedStatement.setBoolean(4, isAdmin);
             preparedStatement.executeUpdate();
@@ -100,10 +97,31 @@ public class FileAccessRepository extends DefaultRepository{
     }
 
     public void RemoveAccess(File file, User selected) {
-
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("DELETE FROM droit_fichier WHERE id_fichier=? AND id_util=?");
+            preparedStatement.setInt(1, file.id);
+            preparedStatement.setInt(2, selected.id);
+            preparedStatement.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
-    public void UpdateAccess(File file, User selected) {
+    public void UpdateAccess(File file, User selected, boolean droit, boolean admin) {
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("UPDATE droit_fichier SET droit_ecriture=? , administrateur=?  WHERE id_fichier=? AND id_util=?");
+            preparedStatement.setBoolean(1, droit);
+            preparedStatement.setBoolean(2, admin);
+            preparedStatement.setInt(3, file.id);
+            preparedStatement.setInt(4, selected.id);
+            preparedStatement.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
     }
 }

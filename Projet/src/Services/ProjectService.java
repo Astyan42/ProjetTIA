@@ -37,20 +37,32 @@ public class ProjectService {
         return list;
     }
 
-    public String addCollaborator(String pseudo, String projectId, String select, boolean droit, boolean admin){
+    public void addCollaborator(String pseudo, String projectId, String select, boolean droit, boolean admin){
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        User selected = UserRepository.getInstance().getUserByNameOrMail(select);
         Project project = ProjectRepository.getInstance().getProjectById(projectId);
         if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
-            ProjectAccessRepository.getInstance().InsertAccess(project,user,droit,admin);
-        }else return "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
-        return null;
+            ProjectAccessRepository.getInstance().InsertAccess(project,selected,droit,admin);
+        }
     }
 
 
     public void removeCollaborator(String pseudo, String id, String select) {
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        User selected = UserRepository.getInstance().getUserByNameOrMail(select);
+        Project project = ProjectRepository.getInstance().getProjectById(id);
+        if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
+            ProjectAccessRepository.getInstance().RemoveAccess(project,selected);
+        }
     }
 
-    public void updateCollaborator(String pseudo, String id, String select) {
+    public void updateCollaborator(String pseudo, String id, String select, boolean droit, boolean admin) {
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        User selected = UserRepository.getInstance().getUserByNameOrMail(select);
+        Project project = ProjectRepository.getInstance().getProjectById(id);
+        if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
+            ProjectAccessRepository.getInstance().UpdateAcess(project,selected,droit,admin);
+        }
 
     }
 }

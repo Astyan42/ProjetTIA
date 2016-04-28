@@ -7,9 +7,6 @@ import Model_Objects.User;
 
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class FileService {
 
     private static FileService _instance;
@@ -34,16 +31,18 @@ public class FileService {
     public ArrayList<String> getCollaborators(String pseudo, int fileId) {
         ArrayList<String> list = new ArrayList<String>();
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
-        FileAccessRepository.getInstance().getCollaborators(fileId, user.id);
+        list = FileAccessRepository.getInstance().getCollaborators(fileId, user.id);
         return list;
     }
 
-    public void addCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin) {
+    public String addCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin) {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        User selected= UserRepository.getInstance().getUserByNameOrMail(select);
         File file = FileRepository.getInstance().getFileById(fileId);
         if (FileAccessRepository.getInstance().isAdmin(user, file)) {
-            FileAccessRepository.getInstance().InsertAccess(file, user, droit, admin);
-        }
+            FileAccessRepository.getInstance().InsertAccess(file, selected, droit, admin);
+        }else return "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
+        return null;
     }
 
     public String removeCollaborator(String pseudo, String fileId, String select) {
@@ -56,13 +55,14 @@ public class FileService {
         return null;
     }
 
-    public void updateCollaborator(String pseudo, String fileId, String select) {
+    public String updateCollaborator(String pseudo, String fileId, String select, boolean droit, boolean admin) {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         User selected = UserRepository.getInstance().getUserByNameOrMail(select);
         File file = FileRepository.getInstance().getFileById(fileId);
         if(FileAccessRepository.getInstance().isAdmin(user,file)){
-            FileAccessRepository.getInstance().UpdateAccess(file, selected);
-        }
+            FileAccessRepository.getInstance().UpdateAccess(file, selected,droit,admin);
+        }else return  "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
+        return null;
     }
 
 }
