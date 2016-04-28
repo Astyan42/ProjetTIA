@@ -38,7 +38,13 @@ public class FileService {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         File file = FileRepository.getInstance().getFileById(fileId);
         if(FileAccessRepository.getInstance().isAdmin(user,file)){
-            FileAccessRepository.getInstance().InsertAccess(file,user,droit,admin);
+            FileAccessRepository.getInstance().InsertAccess(file, user, droit, admin);
         }
+    }
+
+    public void removeCollaborator(String pseudo, String id, String select) {
+    }
+
+    public void updateCollaborator(String pseudo, String id, String select) {
     }
 }

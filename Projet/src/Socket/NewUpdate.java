@@ -76,13 +76,25 @@ public class NewUpdate implements Runnable {
                             break;
                         case "remove":
                             select=Insert.get(5);
-                            oos.writeObject(insertBDD.remCollab(pseudo,type,id,select));
+                            if(type == "projet"){
+                                ProjectService.getInstance().removeCollaborator(pseudo, id, select);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
+                            if(type == "fichier"){
+                                FileService.getInstance().removeCollaborator(pseudo, id, select);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
                             break;
                         case "modif":
-                            droit = Insert.get(6);
-                            admin =Insert.get(7);
                             select=Insert.get(5);
-                            oos.writeObject(insertBDD.modCollab(pseudo,type,id,select));
+                            if(type == "projet"){
+                                ProjectService.getInstance().updateCollaborator(pseudo, id, select);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
+                            if(type == "fichier"){
+                                FileService.getInstance().updateCollaborator(pseudo, id, select);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
                             break;
                     }
                     break;

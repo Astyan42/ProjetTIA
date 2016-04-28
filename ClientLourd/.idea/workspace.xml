@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b9012bf-4286-45ec-812e-4f86dff86aa5" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\NewChat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\NewConnectionThread.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\NewEditeur.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\NewUpdate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\NewXmlUpdate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\Sockets\ChatSocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\Sockets\ConnectionSocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\Sockets\EditeurSocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\Sockets\UpdateSocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jdeveaux\Desktop\Projet TIA\Projet\src\WebServices\Threads\Sockets\XmlUpdateSocket.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/DAL/FileAccessRepository.java" afterPath="$PROJECT_DIR$/../Projet/src/DAL/FileAccessRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/DAL/FileRepository.java" afterPath="$PROJECT_DIR$/../Projet/src/DAL/FileRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Services/FileService.java" afterPath="$PROJECT_DIR$/../Projet/src/Services/FileService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/WebServices/BddRequest/InsertBDD.java" afterPath="$PROJECT_DIR$/../Projet/src/WebServices/BddRequest/InsertBDD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Model_Objects/Project.java" afterPath="$PROJECT_DIR$/../Projet/src/Model_Objects/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/DAL/ProjectAccessRepository.java" afterPath="$PROJECT_DIR$/../Projet/src/DAL/ProjectAccessRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/DAL/ProjectRepository.java" afterPath="$PROJECT_DIR$/../Projet/src/DAL/ProjectRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Socket/NewUpdate.java" afterPath="$PROJECT_DIR$/../Projet/src/Socket/NewUpdate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/Services/ProjectService.java" afterPath="$PROJECT_DIR$/../Projet/src/Services/ProjectService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/src/WebServices/WebService.java" afterPath="$PROJECT_DIR$/../Projet/src/WebServices/WebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Projet/.idea/workspace.xml" />
     </list>
     <ignored path="projetTia.iws" />
     <ignored path=".idea/workspace.xml" />

@@ -41,4 +41,10 @@ public class ProjectService {
             ProjectAccessRepository.getInstance().InsertAccess(project,user,droit,admin);
         }
     }
+
+    public void removeCollaborator(String pseudo, String id, String select) {
+    }
+
+    public void updateCollaborator(String pseudo, String id, String select) {
+    }
 }
