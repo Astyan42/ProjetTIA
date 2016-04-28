@@ -1,6 +1,6 @@
 package SocketLayer;
 
-import WebServices.BddRequest.Arborescence;
+import Services.ArborescenceService;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -9,7 +9,6 @@ import java.net.Socket;
 
 public class NewXmlUpdate implements Runnable {
     private Socket socket;
-    public static Arborescence arbo = new Arborescence();
 
     public NewXmlUpdate(Socket socket) {
         this.socket = socket;
@@ -20,7 +19,7 @@ public class NewXmlUpdate implements Runnable {
         try {
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
             String pseudo = (String) ois.readObject();
-            String XML =arbo.getArbo(pseudo);
+            String XML = ArborescenceService.getInstance().getArbo(pseudo);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(XML);
             oos.flush();
