@@ -42,6 +42,7 @@ public class ProjectService {
         }
     }
 
+
     public void removeCollaborator(String pseudo, String id, String select) {
     }
 

@@ -22,7 +22,7 @@ public class ConnectionSocket extends ThreadSocketRessources implements Runnable
                 System.out.println("#" + count + " Connect from "
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
-                new Thread(new Socket.NewConnectionThread(socket)).start();
+                new Thread(new NewConnectionThread(socket)).start();
             }
 
         } catch (IOException e) {

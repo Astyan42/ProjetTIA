@@ -32,11 +32,7 @@ public class NewConnectionThread implements Runnable {
             pseudo = auth.get(0);
             password = auth.get(1);
             auhthentification = auth;
-            if (connect.connectionValidate(pseudo,password)){
-                while(true){
 
-                }
-            }
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

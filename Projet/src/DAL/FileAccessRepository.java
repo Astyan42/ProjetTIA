@@ -63,10 +63,10 @@ public class FileAccessRepository extends DefaultRepository{
         try {
             preparedStatement = connection.prepareStatement("SELECT utilisateur.nom " +
                     "from utilisateur " +
-                    "Left outer join acces_projet ON utilisateur.id_util=acces_projet.id_util " +
-                    "where id_projet=? AND utilisateur.id_util<>?;");
+                    "Left outer join droit_fichier ON utilisateur.id_util=acces_projet.id_util " +
+                    "where id_fichier=? AND utilisateur.id_util<>?;");
             preparedStatement.setInt(1, fileId);
-            preparedStatement.setString(2, String.valueOf(userId));
+            preparedStatement.setInt(2, userId);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 result.add(resultSet.getString(1));
@@ -99,5 +99,9 @@ public class FileAccessRepository extends DefaultRepository{
             e.printStackTrace();
             return false;
         }
+    }
+
+    public void RemoveAccess(File file, User selected) {
+
     }
 }

@@ -22,7 +22,7 @@ public class ChatSocket extends ThreadSocketRessources implements Runnable {
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new Socket.NewChat(socket)).start();
+                //new Thread(new Socket.NewChat(socket)).start();
             }
 
         } catch (IOException e) {
