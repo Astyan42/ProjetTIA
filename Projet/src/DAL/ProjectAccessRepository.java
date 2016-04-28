@@ -49,6 +49,7 @@ public class ProjectAccessRepository extends DefaultRepository{
             preparedStatement.setInt(2, u.id);
             preparedStatement.setBoolean(3, isAdmin);
             preparedStatement.setBoolean(4, read);
+            preparedStatement.executeUpdate();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -81,7 +82,7 @@ public class ProjectAccessRepository extends DefaultRepository{
     public boolean isAdmin(User u, Project p){
         PreparedStatement preparedStatement;
         try {
-            preparedStatement = this.getConnection().prepareStatement("SELECT administrateur from acces_projet where id_util=? And id_fichier=?");
+            preparedStatement = this.getConnection().prepareStatement("SELECT admin from acces_projet where id_util=? And id_projet=?");
             preparedStatement.setInt(1, u.id);
             preparedStatement.setInt(2, p.id_projet);
             int testDroit;
@@ -99,5 +100,34 @@ public class ProjectAccessRepository extends DefaultRepository{
             e.printStackTrace();
             return false;
         }
+    }
+
+    public void RemoveAccess(Project project, User selected) {
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("DELETE FROM acces_projet WHERE id_projet=? AND id_util=?");
+            preparedStatement.setInt(1, project.id_projet);
+            preparedStatement.setInt(2, selected.id);
+            preparedStatement.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void UpdateAcess(Project project, User selected, boolean droit, boolean admin) {
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("UPDATE acces_projet SET lecture=? , admin=?  WHERE id_projet=? AND id_util=?");
+            preparedStatement.setBoolean(1, droit);
+            preparedStatement.setBoolean(2, admin);
+            preparedStatement.setInt(3, project.id_projet);
+            preparedStatement.setInt(4, selected.id);
+            preparedStatement.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

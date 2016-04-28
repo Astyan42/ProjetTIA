@@ -2,6 +2,7 @@ package ClientLourd.ui.controller.Collaboration;
 
 import ClientLourd.ui.Ressource;
 import ClientLourd.ui.controller.Collaboration.ColListController;
+import ClientLourd.ui.interfaces.IFolderChangeListener;
 import ClientLourd.ui.view.Collaboration;
 
 import javax.swing.*;
@@ -29,6 +30,7 @@ public class CollaborationController extends Ressource{
     private JCheckBox adminCheckBox;
 
     private ColListController colListController;
+
 
     /**
      * initilisation du Controller de frame Collaboration avec l'object
@@ -81,16 +83,16 @@ public class CollaborationController extends Ressource{
                     Socket client = new Socket(SERVER_ADRESS,PORT_UPDATE);
                     ArrayList<String> insert= new ArrayList<String>();
                     insert.add("collab");insert.add("add");insert.add(pseudo);insert.add(type);insert.add(id);insert.add(newCollabo.getText());
-                    if(adminCheckBox.isSelected())insert.add("1");
-                    else insert.add("0");
-                    if(ecritureCheckBox.isSelected())insert.add("1");
-                    else insert.add("0");
+                    if(adminCheckBox.isSelected())insert.add("true");
+                    else insert.add("false");
+                    if(ecritureCheckBox.isSelected())insert.add("true");
+                    else insert.add("false");
                     ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
                     oos.writeObject(insert);
                     oos.flush();
                     ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
                     String result = (String) ois.readObject();
-                    if (!result.equals(null)){
+                    if (result!=null&&!result.equals("Les erreurs ne sont pas encore gérées")){
                         JOptionPane.showMessageDialog(col,
                                 "erreur de type inconnu",
                                 "error: ",
@@ -99,7 +101,6 @@ public class CollaborationController extends Ressource{
                 } catch (IOException | ClassNotFoundException e1) {
                     e1.printStackTrace();
                 }
-                evtManager.TriggerColListChangeEvent();
             }
         });
         supprimerCollaborateurButton.addActionListener(new ActionListener() {
@@ -115,16 +116,16 @@ public class CollaborationController extends Ressource{
                         Socket client = new Socket(SERVER_ADRESS,PORT_UPDATE);
                         ArrayList<String> insert= new ArrayList<String>();
                         insert.add("collab");insert.add("remove");insert.add(pseudo);insert.add(type);insert.add(id);insert.add((String)colList.getSelectedValue());
-                        if(adminCheckBox.isSelected())insert.add("1");
-                        else insert.add("0");
-                        if(ecritureCheckBox.isSelected())insert.add("1");
-                        else insert.add("0");
+                        if(adminCheckBox.isSelected())insert.add("true");
+                        else insert.add("false");
+                        if(ecritureCheckBox.isSelected())insert.add("true");
+                        else insert.add("false");
                         ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
                         oos.writeObject(insert);
                         oos.flush();
                         ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
                         String result = (String) ois.readObject();
-                        if (!result.equals(null)||result.equals("Les erreurs ne sont pas encore gérées")){
+                        if (result!=null&&!result.equals("Les erreurs ne sont pas encore gérées")){
                                     JOptionPane.showMessageDialog(col,
                                     "erreur a l'ajout:"+result,
                                     "error: ",
@@ -157,8 +158,8 @@ public class CollaborationController extends Ressource{
                         oos.writeObject(insert);
                         oos.flush();
                         ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
-                        ArrayList<String> result = (ArrayList<String>) ois.readObject();
-                        if (result.size()>0){
+                        String result = (String) ois.readObject();
+                        if (result!=null&&!result.equals("Les erreurs ne sont pas encore gérées")){
                             JOptionPane.showMessageDialog(col,
                                     result,
                                     "error: ",

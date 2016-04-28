@@ -61,10 +61,11 @@ public class NewUpdate implements Runnable {
 
                         case "add":
                             select=Insert.get(5);
-                            droit = Boolean.parseBoolean(Insert.get(6));
-                            admin = Boolean.parseBoolean(Insert.get(7));
+                            droit = Boolean.valueOf(Insert.get(6));
+                            admin = Boolean.valueOf(Insert.get(7));
                             if(type.equals("projet")){
-                                oos.writeObject(ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin));
+                                ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
                             if(type.equals("fichier") ){
                                 FileService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
@@ -84,12 +85,14 @@ public class NewUpdate implements Runnable {
                             break;
                         case "modif":
                             select=Insert.get(5);
+                            droit = Boolean.valueOf(Insert.get(6));
+                            admin = Boolean.valueOf(Insert.get(7));
                             if(type.equals("projet")){
-                                ProjectService.getInstance().updateCollaborator(pseudo, id, select);
+                                ProjectService.getInstance().updateCollaborator(pseudo, id, select,droit,admin);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
                             if(type.equals("fichier")){
-                                FileService.getInstance().updateCollaborator(pseudo, id, select);
+                                FileService.getInstance().updateCollaborator(pseudo, id, select,droit,admin);
                                 oos.writeObject("Les erreurs ne sont pas encore gérées");
                             }
                             break;

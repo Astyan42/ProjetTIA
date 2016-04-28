@@ -2,13 +2,8 @@
 <!DOCTYPE arborescence SYSTEM "dtd_arborescence.dtd">
 <arborescence>
 <projet idp="0" name="/">
-	<projet idp="1" name="num1">
-		<projet idp="2" name="num2">
-		</projet>
-		<fichier idf="2" name="num2"/>
- 	</projet>
-	<projet idp="3" name="bonjour">
+	<projet idp="4" name="coucou">
 	</projet>
-	<fichier idf="1" name="num1"/>
+	<fichier idf="3" name="fic"/>
  </projet>
 </arborescence>
