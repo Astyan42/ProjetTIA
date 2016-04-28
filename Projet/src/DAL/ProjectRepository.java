@@ -35,11 +35,30 @@ public class ProjectRepository extends DefaultRepository{
             ResultSet rs = preparedStatement.getGeneratedKeys();
             rs.next();
             int idProjet = rs.getInt(1);
-            project = new Project(idProjet,name,pere);
+            project = new Project(idProjet,name,Integer.parseInt(pere));
         }
         catch(Exception e){
             e.printStackTrace();
         }
         return project;
+    }
+
+    public Project getProjectById(String projectId) {
+        Connection connection = this.getConnection();
+        Project file = null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM projet WHERE id_projet=?;");
+            preparedStatement.setString(1, projectId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            int id = resultSet.getInt(1);
+            String nom = resultSet.getString(2);
+            int id_pere = resultSet.getInt(3);
+            file = new Project(id,nom,id_pere);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return file;
     }
 }

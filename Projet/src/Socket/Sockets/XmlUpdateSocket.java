@@ -1,29 +1,29 @@
-package WebServices.Threads.Sockets;
+package Socket.Sockets;
+
 
 import WebServices.Ressources.ThreadSocketRessources;
-import WebServices.Threads.NewConnectionThread;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ConnectionSocket extends ThreadSocketRessources implements Runnable {
-
+public class XmlUpdateSocket extends ThreadSocketRessources implements Runnable {
     public void run() {
         int count=0;
-        try (ServerSocket serverSocket = new ServerSocket(PORT_CONNECT)) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT_XML_UP)) {
 
-            System.out.println("I'm waiting here: Connect \n"+serverSocket.getLocalSocketAddress());
+            System.out.println("I'm waiting here: XML \n"+serverSocket.getLocalSocketAddress());
 
             while (true) {
 
                 Socket socket = serverSocket.accept();
 
                 count++;
-                System.out.println("#" + count + " Connect from "
+                System.out.println("#" + count + " xml Update from "
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
-                new Thread(new NewConnectionThread(socket)).start();
+
+                new Thread(new Socket.NewXmlUpdate(socket)).start();
             }
 
         } catch (IOException e) {

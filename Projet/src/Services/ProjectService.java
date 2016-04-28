@@ -1,8 +1,7 @@
 package Services;
 
-import DAL.ProjectAccessRepository;
-import DAL.ProjectRepository;
-import DAL.UserRepository;
+import DAL.*;
+import Model_Objects.File;
 import Model_Objects.Project;
 import Model_Objects.User;
 
@@ -33,5 +32,13 @@ public class ProjectService {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         list = ProjectAccessRepository.getInstance().getCollaborators(projectId,user.id);
         return list;
+    }
+
+    public void addCollaborator(String pseudo, String projectId, String select, boolean droit, boolean admin){
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        Project project = ProjectRepository.getInstance().getProjectById(projectId);
+        if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
+            ProjectAccessRepository.getInstance().InsertAccess(project,user,droit,admin);
+        }
     }
 }

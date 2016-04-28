@@ -1,8 +1,6 @@
-package WebServices.Threads.Sockets;
+package Socket.Sockets;
 
 import WebServices.Ressources.ThreadSocketRessources;
-import WebServices.Threads.NewUpdate;
-import WebServices.Threads.NewXmlUpdate;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -24,7 +22,7 @@ public class UpdateSocket extends ThreadSocketRessources implements Runnable {
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
 
-                new Thread(new NewUpdate(socket)).start();
+                new Thread(new Socket.NewUpdate(socket)).start();
             }
 
         } catch (IOException e) {

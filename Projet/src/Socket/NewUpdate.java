@@ -1,4 +1,4 @@
-package WebServices.Threads;
+package Socket;
 
 import Services.FileService;
 import Services.ProjectService;
@@ -49,26 +49,30 @@ public class NewUpdate implements Runnable {
                     pseudo = Insert.get(2);
                     type = Insert.get(3);
                     id= Insert.get(4);
-                    String droit;
-                    String admin;
+                    boolean droit;
+                    boolean admin;
                     switch (Insert.get(1)){
                         case "show":
                             if(type == "projet"){
-                                ProjectService.getInstance().getCollaborators(pseudo, Integer.parseInt(id));
+                                oos.writeObject(ProjectService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
                             }
                             if(type == "fichier"){
-                                FileService.getInstance().getCollaborators(pseudo, Integer.parseInt(id));
+                                oos.writeObject(FileService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
                             }
-                            oos.writeObject(i);
-                            System.out.println(i);
                             break;
 
                         case "add":
-
                             select=Insert.get(5);
-                            droit = Insert.get(6);
-                            admin =Insert.get(7);
-                            oos.writeObject(insertBDD.addCollab(pseudo,type,id,select,droit,admin));
+                            droit = Boolean.parseBoolean(Insert.get(6));
+                            admin = Boolean.parseBoolean(Insert.get(7));
+                            if(type == "projet"){
+                                ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
+                            if(type == "fichier"){
+                                FileService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
+                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                            }
                             break;
                         case "remove":
                             select=Insert.get(5);

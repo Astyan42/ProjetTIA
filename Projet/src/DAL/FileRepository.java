@@ -48,4 +48,25 @@ public class FileRepository extends DefaultRepository{
         }
         return file;
     }
+
+    public File getFileById(String fileId) {
+            Connection connection = this.getConnection();
+            File file = null;
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM fichier WHERE id_fichier=?;");
+                preparedStatement.setString(1, fileId);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                resultSet.next();
+                int id = resultSet.getInt(1);
+                int projectId = resultSet.getInt(2);
+                String name = resultSet.getString(3);
+                String filePath = resultSet.getString(4);
+                file = new File(id,projectId,name,filePath);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+            return file;
+
+    }
 }

@@ -1,4 +1,4 @@
-package WebServices.Threads;
+package Socket;
 
 import java.net.Socket;
 
