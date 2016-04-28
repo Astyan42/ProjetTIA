@@ -25,13 +25,12 @@ public class FileAccessRepository extends DefaultRepository{
 
     public void InsertAdminAccess(File f, User u){
         Connection connection = this.getConnection();
-        User user = null;
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur)VALUES (?,?,TRUE,TRUE,TRUE);");
-            preparedStatement.setString(2, String.valueOf(u.id));
-            preparedStatement.setString(1, String.valueOf(f.id));
-            int resultat = preparedStatement.executeUpdate();
+            preparedStatement = connection.prepareStatement( "INSERT INTO droit_fichier (id_util,id_fichier,droit_lecture,droit_ecriture,administrateur) VALUES (?,?,TRUE,TRUE,TRUE);");
+            preparedStatement.setInt(1, u.id);
+            preparedStatement.setInt(2, f.id);
+            preparedStatement.executeUpdate();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -48,7 +47,7 @@ public class FileAccessRepository extends DefaultRepository{
             preparedStatement.setInt(2, u.id);
             preparedStatement.setBoolean(3, write);
             preparedStatement.setBoolean(4, isAdmin);
-            int resultat = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -57,13 +56,12 @@ public class FileAccessRepository extends DefaultRepository{
 
     public ArrayList<String> getCollaborators(int fileId, int userId) {
         Connection connection = this.getConnection();
-        User user = null;
-        PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement;
         ArrayList<String> result = new ArrayList<>();
         try {
             preparedStatement = connection.prepareStatement("SELECT utilisateur.nom " +
                     "from utilisateur " +
-                    "Left outer join droit_fichier ON utilisateur.id_util=acces_projet.id_util " +
+                    "Left outer join droit_fichier ON utilisateur.id_util=droit_fichier.id_util " +
                     "where id_fichier=? AND utilisateur.id_util<>?;");
             preparedStatement.setInt(1, fileId);
             preparedStatement.setInt(2, userId);

@@ -34,7 +34,7 @@ public class NewUpdate implements Runnable {
                     pseudo = Insert.get(1);
                     idProjet = Insert.get(2);
                     name=Insert.get(3);
-                    oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, idProjet));
+                    oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, Integer.parseInt(idProjet)));
                     break;
                 case "fichier":
                     pseudo = Insert.get(1);
@@ -51,10 +51,10 @@ public class NewUpdate implements Runnable {
                     boolean admin;
                     switch (Insert.get(1)){
                         case "show":
-                            if(type == "projet"){
+                            if(type.equals("projet")){
                                 oos.writeObject(ProjectService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
                             }
-                            if(type == "fichier"){
+                            if(type.equals("fichier")){
                                 oos.writeObject(FileService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
                             }
                             break;
@@ -64,8 +64,7 @@ public class NewUpdate implements Runnable {
                             droit = Boolean.parseBoolean(Insert.get(6));
                             admin = Boolean.parseBoolean(Insert.get(7));
                             if(type.equals("projet")){
-                                ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin);
-                                oos.writeObject("Les erreurs ne sont pas encore gérées");
+                                oos.writeObject(ProjectService.getInstance().addCollaborator(pseudo, id, select, droit, admin));
                             }
                             if(type.equals("fichier") ){
                                 FileService.getInstance().addCollaborator(pseudo, id, select, droit, admin);

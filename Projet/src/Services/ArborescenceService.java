@@ -24,21 +24,21 @@ public class ArborescenceService {
 
     public String getArbo(String pseudo){
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
-        ArrayList<Project> projects = ProjectRepository.getInstance().getProjectsForUser(user.id);
         ArrayList<File> files = FileRepository.getInstance().getFilesProjectForUser(user.id, 0);
+        ArrayList<Project> projects = ProjectRepository.getInstance().getProjectsForUser(user.id);
         String file = "";
 
         file+="<?xml version=\"1.0\"?>\n" +
                 "<!DOCTYPE arborescence SYSTEM \"dtd_arborescence.dtd\">\n" +
                 "<arborescence>\n" +
-                "<projet idp=\"NULL\" name=\"/\">\n";
+                "<projet idp=\"0\" name=\"/\">\n";
 
         System.out.println(files);
+        file = XmlWriteProject(file,projects,0,user.id);
+
         for (File rowsFiles : files ){
             file+="\t<fichier idf=\""+rowsFiles.id+"\" name=\""+rowsFiles.name+"\"/>\n ";
         }
-        file = XmlWriteProject(file,projects,0,user.id);
-
 
         file+="</projet>\n" +
                 "</arborescence>";
@@ -47,7 +47,7 @@ public class ArborescenceService {
     }
 
     private String XmlWriteProject(String file, ArrayList<Project> table, int idPere, int user) {
-        return XmlWriteProjectRec(file,table,0,1,user);
+        return XmlWriteProjectRec(file,table,idPere,1,user);
     }
     private String repeat(int count , String s) {
         String result ="";
@@ -62,7 +62,7 @@ public class ArborescenceService {
         for (Project rows: table){
             if(rows.id_pere==idPere){
                 file+=indentS+"<projet idp=\""+rows.id_projet+"\" name=\""+rows.nom+"\">\n";
-                //sous Dossier
+                // sous Dossier
                 file = XmlWriteProjectRec(file,table,rows.id_projet,indent+1, user);
                 // Fichier
                 ArrayList<File> files = FileRepository.getInstance().getFilesProjectForUser(user,rows.id_projet);

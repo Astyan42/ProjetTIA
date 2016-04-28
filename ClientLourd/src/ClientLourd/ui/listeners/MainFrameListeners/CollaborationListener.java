@@ -28,6 +28,6 @@ public class CollaborationListener extends Ressource implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        new CollaborationController(object,type);
+        if (!object.equals("")) new CollaborationController(object,type);
     }
 }

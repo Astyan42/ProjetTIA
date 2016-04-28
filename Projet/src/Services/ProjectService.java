@@ -20,11 +20,14 @@ public class ProjectService {
         }
         return _instance;
     }
-    public Project add_project(String pseudo, String name,String pere) {
+    public String add_project(String pseudo, String name,int pere) {
         Project project = ProjectRepository.getInstance().add_project(name,pere);
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
-        ProjectAccessRepository.getInstance().InsertAdminAccess(project,user);
-        return project;
+        if(project!=null){
+            ProjectAccessRepository.getInstance().InsertAdminAccess(project,user);
+            return project.nom;
+        }
+        return null;
     }
 
     public ArrayList<String> getCollaborators(String pseudo, int projectId){
@@ -34,12 +37,13 @@ public class ProjectService {
         return list;
     }
 
-    public void addCollaborator(String pseudo, String projectId, String select, boolean droit, boolean admin){
+    public String addCollaborator(String pseudo, String projectId, String select, boolean droit, boolean admin){
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         Project project = ProjectRepository.getInstance().getProjectById(projectId);
         if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
             ProjectAccessRepository.getInstance().InsertAccess(project,user,droit,admin);
-        }
+        }else return "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
+        return null;
     }
 
 

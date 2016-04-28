@@ -89,16 +89,17 @@ public class CollaborationController extends Ressource{
                     oos.writeObject(insert);
                     oos.flush();
                     ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
-                    ArrayList<String> result = (ArrayList<String>) ois.readObject();
-                    if (result.size()>0){
+                    String result = (String) ois.readObject();
+                    if (!result.equals(null)){
                         JOptionPane.showMessageDialog(col,
-                                result,
+                                "erreur de type inconnu",
                                 "error: ",
                                 JOptionPane.ERROR_MESSAGE);
                     }else evtManager.TriggerColListChangeEvent();
                 } catch (IOException | ClassNotFoundException e1) {
                     e1.printStackTrace();
                 }
+                evtManager.TriggerColListChangeEvent();
             }
         });
         supprimerCollaborateurButton.addActionListener(new ActionListener() {
@@ -122,10 +123,10 @@ public class CollaborationController extends Ressource{
                         oos.writeObject(insert);
                         oos.flush();
                         ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
-                        ArrayList<String> result = (ArrayList<String>) ois.readObject();
-                        if (result.size()>0){
-                            JOptionPane.showMessageDialog(col,
-                                    result,
+                        String result = (String) ois.readObject();
+                        if (!result.equals(null)||result.equals("Les erreurs ne sont pas encore gérées")){
+                                    JOptionPane.showMessageDialog(col,
+                                    "erreur a l'ajout:"+result,
                                     "error: ",
                                     JOptionPane.ERROR_MESSAGE);
                         }else evtManager.TriggerColListChangeEvent();

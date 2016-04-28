@@ -40,13 +40,13 @@ public class NewProjectController extends Ressource {
                     oos.writeObject(insert);
                     oos.flush();
                     ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
-                    ArrayList<String> result = (ArrayList<String>) ois.readObject();
-                    if(result.size()<1) {
+                    String result = (String) ois.readObject();
+                    if(!result.equals(null)) {
                         newProject.dispose();
                         evtManager.TriggerFolderChangeEvent(ProjectHere);
                     }
                     else{
-                        JOptionPane.showMessageDialog(newProject,result,
+                        JOptionPane.showMessageDialog(newProject,result+" création impossible",
                                 "error",
                                 JOptionPane.ERROR_MESSAGE);
                     }

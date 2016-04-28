@@ -9,9 +9,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class ProjectRepository extends DefaultRepository{
 
     private ProjectRepository() {
@@ -24,23 +21,23 @@ public class ProjectRepository extends DefaultRepository{
         return _instance;
     }
 
-    public Project add_project(String name,String pere){
+    public Project add_project(String name,int pere){
         Connection connection = this.getConnection();
         PreparedStatement preparedStatement = null;
         Project project = null;
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO projet (id_projet,nom,id_pere) VALUES(NULL ,?,?);", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString( 1, name );
-            if (pere.equals("NULL"))preparedStatement.setString( 2, "0" );
-            else preparedStatement.setString( 2, pere );
+            preparedStatement.setInt( 2, pere );
             preparedStatement.executeUpdate();
             ResultSet rs = preparedStatement.getGeneratedKeys();
             rs.next();
             int idProjet = rs.getInt(1);
-            project = new Project(idProjet,name,Integer.parseInt(pere));
+            project = new Project(idProjet,name,pere);
         }
         catch(Exception e){
             e.printStackTrace();
+            return null;
         }
         return project;
     }
@@ -68,7 +65,7 @@ public class ProjectRepository extends DefaultRepository{
         Connection connection = this.getConnection();
         ArrayList<Project> arrayList= new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id_projet,nom,id_pere FROM acces_projet LEFT OUTER JOIN projet WHERE acces_projet.id_projet=projet.id_projet AND id_util=?;");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT projet.id_projet,nom,id_pere FROM acces_projet,projet WHERE acces_projet.id_projet=projet.id_projet AND id_util=?;");
             preparedStatement.setInt(1, userId);
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){

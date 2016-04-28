@@ -28,8 +28,7 @@ public class FileRepository extends DefaultRepository{
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO fichier (id_fichier,id_projet,nom,chemin) VALUES (NULL,?,?,?);", Statement.RETURN_GENERATED_KEYS);
-            if (projectId.equals("NULL")) preparedStatement.setString(1, "0");
-            else preparedStatement.setString(1, projectId);
+            preparedStatement.setString(1, projectId);
 
             preparedStatement.setString(2, fileName);
             String path =  "./fichiers/" + fileName;
@@ -43,6 +42,7 @@ public class FileRepository extends DefaultRepository{
         }
         catch(Exception e ){
             e.printStackTrace();
+            return null;
         }
         return file;
     }

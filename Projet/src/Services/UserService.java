@@ -18,7 +18,7 @@ public class UserService {
 
     public boolean Authentication(String mail, String password){
         User user = UserRepository.getInstance().getUserByNameOrMail(mail);
-        return (user.pass == password);
+        return (user.pass.equals(password));
     }
 
     public boolean IsAlreadyRegistered(String mail){

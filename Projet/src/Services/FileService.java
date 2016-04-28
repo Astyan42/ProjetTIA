@@ -21,11 +21,14 @@ public class FileService {
         return _instance;
     }
 
-    public File addFile(String pseudo, String idProjet, String name) {
+    public String addFile(String pseudo, String idProjet, String name) {
         File file = FileRepository.getInstance().add_file(idProjet, name);
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
-        FileAccessRepository.getInstance().InsertAdminAccess(file, user);
-        return file;
+        if (file!=null){
+            FileAccessRepository.getInstance().InsertAdminAccess(file, user);
+            return file.name;
+        }
+        return null;
     }
 
     public ArrayList<String> getCollaborators(String pseudo, int fileId) {
@@ -43,13 +46,14 @@ public class FileService {
         }
     }
 
-    public void removeCollaborator(String pseudo, String fileId, String select) {
+    public String removeCollaborator(String pseudo, String fileId, String select) {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         User selected = UserRepository.getInstance().getUserByNameOrMail(select);
         File file = FileRepository.getInstance().getFileById(fileId);
         if(FileAccessRepository.getInstance().isAdmin(user,file)){
             FileAccessRepository.getInstance().RemoveAccess(file, selected);
-        }
+        }else return "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
+        return null;
     }
 
     public void updateCollaborator(String pseudo, String fileId, String select) {
