@@ -18,12 +18,12 @@ public class UserService {
 
     public boolean Authentication(String mail, String password){
         User user = UserRepository.getInstance().getUserByNameOrMail(mail);
-        return (user.pass.equals(password));
+        return (user != null && user.pass.equals(password));
     }
 
     public boolean IsAlreadyRegistered(String mail){
         User user = UserRepository.getInstance().getUserByNameOrMail(mail);
-        return (user == null);
+        return (user != null);
     }
 
     public User createUser(String name, String mail, String pass){
