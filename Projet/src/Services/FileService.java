@@ -43,7 +43,13 @@ public class FileService {
         }
     }
 
-    public void removeCollaborator(String pseudo, String id, String select) {
+    public void removeCollaborator(String pseudo, String fileId, String select) {
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        User selected = UserRepository.getInstance().getUserByNameOrMail(select);
+        File file = FileRepository.getInstance().getFileById(fileId);
+        if(FileAccessRepository.getInstance().isAdmin(user,file)){
+            FileAccessRepository.getInstance().RemoveAccess(file, selected);
+        }
     }
 
     public void updateCollaborator(String pseudo, String id, String select) {
