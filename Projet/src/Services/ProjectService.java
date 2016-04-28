@@ -46,5 +46,6 @@ public class ProjectService {
     }
 
     public void updateCollaborator(String pseudo, String id, String select) {
+
     }
 }

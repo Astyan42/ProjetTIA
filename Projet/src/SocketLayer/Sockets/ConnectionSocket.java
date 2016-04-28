@@ -1,4 +1,4 @@
-package Socket.Sockets;
+package SocketLayer.Sockets;
 
 import WebServices.Ressources.ThreadSocketRessources;
 
@@ -22,7 +22,7 @@ public class ConnectionSocket extends ThreadSocketRessources implements Runnable
                 System.out.println("#" + count + " Connect from "
                         + socket.getInetAddress() + ":"
                         + socket.getPort());
-                new Thread(new Socket.NewConnectionThread(socket)).start();
+                new Thread(new SocketLayer.NewConnectionThread(socket)).start();
             }
 
         } catch (IOException e) {

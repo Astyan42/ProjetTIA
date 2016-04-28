@@ -1,8 +1,7 @@
-package Socket;
+package SocketLayer;
 
 import Services.FileService;
 import Services.ProjectService;
-import WebServices.BddRequest.InsertBDD;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 
 public class NewUpdate implements Runnable {
     private final Socket socket;
-    public static InsertBDD insertBDD = new InsertBDD();
 
     public NewUpdate(Socket socket) {
         this.socket = socket;

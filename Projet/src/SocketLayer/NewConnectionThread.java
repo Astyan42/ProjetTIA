@@ -1,4 +1,4 @@
-package Socket;
+package SocketLayer;
 
 import WebServices.BddRequest.Connect;
 
@@ -7,7 +7,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.concurrent.RunnableFuture;
 
 public class NewConnectionThread implements Runnable {
     public String pseudo;
