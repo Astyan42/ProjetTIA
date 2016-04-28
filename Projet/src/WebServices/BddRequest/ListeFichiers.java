@@ -12,7 +12,7 @@ import java.util.List;
 // SELECT fichier.id_fichier,fichier.nom FROM fichier,droit_fichier WHERE fichier.id_fichier=droit_fichier.id_fichier AND fichier.id_projet is NULL AND droit_fichier.id_util=? AND droit_fichier.droit_lecture is TRUE
    // SELECTION DOSSIER
 //SELECT projet.id_projet,projet.nom FROM acces_projet,projet WHERE acces_projet.id_projet=projet.id_projet AND acces_projet.id_util=?
-public class ListeFichiers extends BddRessources {
+public class ListeFichiers {
 	
 	private List<String> messages = new ArrayList<String>();
 	private HashMap <Integer,String> liste_fichiers = new <Integer,String> HashMap();

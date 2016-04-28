@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class Arborecence extends BddRessources {
+public class Arborescence {
     public String getArbo(String pseudo){
         /* Chargement du driver JDBC pour MySQL */
         try {

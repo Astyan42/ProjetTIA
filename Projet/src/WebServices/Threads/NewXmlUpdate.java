@@ -1,17 +1,15 @@
 package WebServices.Threads;
 
-import WebServices.BddRequest.Arborecence;
+import WebServices.BddRequest.Arborescence;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class NewXmlUpdate implements Runnable {
     private Socket socket;
-    public static Arborecence arbo = new Arborecence();
+    public static Arborescence arbo = new Arborescence();
 
     public NewXmlUpdate(Socket socket) {
         this.socket = socket;

@@ -1,8 +1,9 @@
 package WebServices.Threads;
 
+import Services.FileService;
+import Services.ProjectService;
 import WebServices.BddRequest.InsertBDD;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -35,13 +36,13 @@ public class NewUpdate implements Runnable {
                     pseudo = Insert.get(1);
                     idProjet = Insert.get(2);
                     name=Insert.get(3);
-                    oos.writeObject(insertBDD.insertProjet(pseudo,name,idProjet));
+                    oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, idProjet));
                     break;
                 case "fichier":
                     pseudo = Insert.get(1);
                     idProjet = Insert.get(2);
                     name=Insert.get(3);
-                    oos.writeObject(insertBDD.insertFichier(pseudo,idProjet,name));
+                    oos.writeObject(FileService.getInstance().addFile(pseudo,idProjet,name));
                     break;
                 case "collab":
                     // collab,commande,pseudo,type,id,select,droit,admin
@@ -52,7 +53,12 @@ public class NewUpdate implements Runnable {
                     String admin;
                     switch (Insert.get(1)){
                         case "show":
-                            ArrayList<String> i = insertBDD.getCollab(pseudo,type,id);
+                            if(type == "projet"){
+                                ProjectService.getInstance().getCollaborators(pseudo, Integer.parseInt(id));
+                            }
+                            if(type == "fichier"){
+                                FileService.getInstance().getCollaborators(pseudo, Integer.parseInt(id));
+                            }
                             oos.writeObject(i);
                             System.out.println(i);
                             break;

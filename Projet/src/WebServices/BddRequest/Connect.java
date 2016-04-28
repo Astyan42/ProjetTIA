@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class Connect extends BddRessources {
+public class Connect {
 	private int nombre_resultat;
 	private List<String> messages = new ArrayList<String>();
 	
@@ -17,7 +17,7 @@ public class Connect extends BddRessources {
 	try {
 	    Class.forName( "com.mysql.jdbc.Driver" );
 	} catch ( ClassNotFoundException e ) {
-	    /* G�rer les �ventuelles erreurs ici. */
+		messages.add("ERREUR lors de la connection a la bdd "+ e.getMessage());
 	}
 
 	int compteur = 0;
@@ -72,13 +72,15 @@ public class Connect extends BddRessources {
 		this.nombre_resultat = nombre_resultat;
 	}
 
-	public boolean connectionValidate(String mail, String password){
+	public boolean connectionValidate(String mail, String password) {
 	/* Chargement du driver JDBC pour MySQL */
+
 		try {
 			Class.forName( "com.mysql.jdbc.Driver" );
-		} catch ( ClassNotFoundException e ) {
-	    /* G�rer les �ventuelles erreurs ici. */
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 		}
+
 
 		int compteur = 0;
         try {
@@ -98,7 +100,7 @@ public class Connect extends BddRessources {
 			this.setNombre_resultat(compteur);
 
 		} catch ( SQLException e ) {
-			messages.add("ERREUR lors de la connection a la bdd "+ e.getMessage());
+			System.out.print(e.getMessage());
 		} finally {
 			if ( resultat != null ) {
 				try {

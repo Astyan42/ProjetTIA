@@ -10,7 +10,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 
-public class Inscription extends BddRessources {
+public class Inscription  {
 	private int resultat;
 	private List<String> messages = new ArrayList<String>();
 	
