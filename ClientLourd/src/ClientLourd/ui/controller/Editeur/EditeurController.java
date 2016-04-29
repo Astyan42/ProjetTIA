@@ -6,12 +6,15 @@ import ClientLourd.ui.view.Com;
 import ClientLourd.ui.view.Editeur;
 
 import javax.swing.*;
+import javax.websocket.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 public class EditeurController extends Ressource {
@@ -27,28 +30,25 @@ public class EditeurController extends Ressource {
     private Socket client= null;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
+
+    // webSocket
+    private final String uri="ws\\\\:localhost:2020\\Editeur";
+    private Session session;
     public EditeurController(String name) {
         ArrayList<Com> commentaires=new ArrayList<>();
         String content="";
-
         try {
-            client = new Socket(SERVER_ADRESS,PORT_EDITEUR);
-            ArrayList<String> insert= new ArrayList<String>();
-            insert.add(name);
-            oos = new ObjectOutputStream(client.getOutputStream());
-            oos.writeObject(insert);
-            oos.flush();
-            ois = new ObjectInputStream(client.getInputStream());
-            content = (String) ois.readObject();
 
-        } catch (IOException | ClassNotFoundException e1) {
-            e1.printStackTrace();
+            WebSocketContainer container= ContainerProvider.getWebSocketContainer();
+            container.connectToServer(this, new URI(uri));
+
+            initComponent();
+            initController();
+            initListener();
+        } catch (DeploymentException | IOException | URISyntaxException e) {
+            e.printStackTrace();
         }
-
         editeur = new Editeur(name,content,commentaires);
-        initComponent();
-        initController();
-        initListener();
         new ChatController();
     }
 
@@ -64,7 +64,23 @@ public class EditeurController extends Ressource {
 
     private void initController() {
     }
+    @OnOpen
+    public void onOpen(Session session){
+        this.session=session;
+    }
 
+    @OnMessage
+    public void onMessage(String message, Session session){
+        editorPane1.setText(message);
+    }
+
+    public void sendMessage(String message){
+        try {
+            session.getBasicRemote().sendObject(message);
+        } catch (IOException | EncodeException ex) {
+            ex.printStackTrace();
+        }
+    }
     private void initListener() {
         editorPane1.addKeyListener(new KeyListener() {
             @Override
@@ -76,22 +92,9 @@ public class EditeurController extends Ressource {
             public void keyPressed(KeyEvent e) {
                 int pos = editorPane1.getCaretPosition();
                 char c = e.getKeyChar();
+                String array = pos+"-"+c;
 
-                try {
-                    oos.writeInt(pos);
-                    oos.flush();
-                    oos.writeChar(c);
-                    oos.flush();
-                    Boolean update = ois.readBoolean();
-                    if (update){
-                        // demande la mise a jour du fichier au web service
-                        String newContent =(String) ois.readObject();
-                        editorPane1.setText(newContent);
-                        e.setKeyCode(127);
-                    }
-                } catch (IOException | ClassNotFoundException e1) {
-                    e1.printStackTrace();
-                }
+                sendMessage(array);
             }
 
             @Override
