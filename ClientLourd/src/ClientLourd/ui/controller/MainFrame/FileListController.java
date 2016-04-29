@@ -5,9 +5,17 @@ import ClientLourd.ui.controller.XmlArboController;
 import ClientLourd.ui.interfaces.IFolderChangeListener;
 import ClientLourd.ui.listeners.MainFrameListeners.CollaborationListener;
 import ClientLourd.ui.listeners.MainFrameListeners.EditerListener;
+import ClientLourd.ui.listeners.MainFrameListeners.RemoveListener;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
 
 
 public class FileListController extends Ressource implements IFolderChangeListener {
@@ -54,6 +62,7 @@ public class FileListController extends Ressource implements IFolderChangeListen
                 if (index >= 0) {
                     Object o = theList.getModel().getElementAt(index);
                     theList.setSelectedIndex(index);
+                    int id= Integer.parseInt(xmlDoc.getId(o.toString(),"fichier"));
                     JPopupMenu editMenu = new JPopupMenu();
                     JMenuItem editItem = new JMenuItem("Editer");
                     editItem.setActionCommand("Editer");
@@ -64,6 +73,7 @@ public class FileListController extends Ressource implements IFolderChangeListen
 
                     JMenuItem delItem = new JMenuItem("Supprimer");
                     delItem.setActionCommand("Supprimer");
+                    delItem.addActionListener(new RemoveListener("fichier",id));
                     editMenu.add(editItem);
                     editMenu.add(collabItem);
                     editMenu.addSeparator();

@@ -1,10 +1,13 @@
 package ClientLourd.ui;
 
 import ClientLourd.ui.controller.XmlArboController;
+import ClientLourd.ui.view.MainFrame;
 
 import javax.swing.*;
 
 public class Ressource {
+
+    public static MainFrame mainFrame;
     public static EventManager evtManager = new EventManager();
     public static XmlArboController xmlDoc;
     public static JLabel arianne;

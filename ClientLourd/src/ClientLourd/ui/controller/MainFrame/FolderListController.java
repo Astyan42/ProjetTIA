@@ -4,11 +4,18 @@ import ClientLourd.ui.Ressource;
 import ClientLourd.ui.controller.XmlArboController;
 import ClientLourd.ui.interfaces.IFolderChangeListener;
 import ClientLourd.ui.listeners.MainFrameListeners.CollaborationListener;
+import ClientLourd.ui.listeners.MainFrameListeners.RemoveListener;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
 
 public class FolderListController extends Ressource implements IFolderChangeListener {
     private JList folderList;
@@ -85,13 +92,14 @@ public class FolderListController extends Ressource implements IFolderChangeList
                             evtManager.TriggerFolderChangeEvent(o.toString());
                         }
                     });
-
+                    int id= Integer.parseInt(xmlDoc.getId(o.toString(),"projet"));
                     JMenuItem collabItem = new JMenuItem("Collaboration");
                     collabItem.setActionCommand("Collaboration");
                     collabItem.addActionListener(new CollaborationListener(o.toString(),"projet"));
 
                     JMenuItem delItem = new JMenuItem("Supprimer");
                     delItem.setActionCommand("Supprimer");
+                    delItem.addActionListener(new RemoveListener("projet",id));
                     editMenu.add(openItem);
                     editMenu.add(collabItem);
                     editMenu.addSeparator();

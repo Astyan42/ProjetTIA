@@ -34,7 +34,7 @@ public class NewProjectController extends Ressource {
                 try {
                     client = new Socket(SERVER_ADRESS,PORT_UPDATE);
                     ArrayList<String> insert= new ArrayList<String>();
-                    insert.add("projet");insert.add(pseudo);insert.add(idProjectHere);insert.add(textField1.getText());
+                    insert.add("projet");insert.add("add");insert.add(pseudo);insert.add(idProjectHere);insert.add(textField1.getText());
                     ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
 
                     oos.writeObject(insert);

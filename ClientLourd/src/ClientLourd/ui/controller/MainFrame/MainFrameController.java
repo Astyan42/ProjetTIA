@@ -13,7 +13,6 @@ import javax.swing.*;
 
 
 public class MainFrameController extends Ressource implements IFolderChangeListener{
-    private MainFrame mainFrame;
     private JButton nouveauProjectButton;
     private JButton nouveauFicButtun;
     private JButton collaborationButton;
