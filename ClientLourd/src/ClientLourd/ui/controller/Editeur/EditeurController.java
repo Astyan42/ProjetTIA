@@ -6,6 +6,8 @@ import ClientLourd.ui.view.Com;
 import ClientLourd.ui.view.Editeur;
 
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -20,20 +22,23 @@ public class EditeurController extends Ressource {
     private JTextArea textArea1;
     private JTabbedPane Commentaires;
     private JPanel panel1;
-    private JEditorPane editorPane1;
+    private JTextArea editorPane1;
 
+    private Socket client= null;
+    private ObjectOutputStream oos;
+    private ObjectInputStream ois;
     public EditeurController(String name) {
         ArrayList<Com> commentaires=new ArrayList<>();
         String content="";
-        Socket client= null;
+
         try {
             client = new Socket(SERVER_ADRESS,PORT_EDITEUR);
             ArrayList<String> insert= new ArrayList<String>();
             insert.add(name);
-            ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
+            oos = new ObjectOutputStream(client.getOutputStream());
             oos.writeObject(insert);
             oos.flush();
-            ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
+            ois = new ObjectInputStream(client.getInputStream());
             content = (String) ois.readObject();
 
         } catch (IOException | ClassNotFoundException e1) {
@@ -61,6 +66,44 @@ public class EditeurController extends Ressource {
     }
 
     private void initListener() {
-        
+        editorPane1.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                int pos = editorPane1.getCaretPosition();
+                char c = e.getKeyChar();
+                try {
+
+                    ArrayList<String> array = new ArrayList<String>();
+                    array.add(String.valueOf(pos));
+                    array.add(String.valueOf(c));
+                    oos.writeObject(array);
+                    oos.flush();
+                    Boolean content = ois.readBoolean();
+                    String query="";
+                    if (content){
+                        // demande la mise a jour du fichier au web service
+                        query="update";
+                    }
+                    oos.writeObject(query);
+                    oos.flush();
+                    if (query.equals("update")){
+                        editorPane1.setText((String) ois.readObject());
+                        editorPane1.setCaretPosition(pos);
+                    }else ois.readObject();
+                } catch (IOException | ClassNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
     }
 }

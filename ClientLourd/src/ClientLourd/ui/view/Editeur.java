@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Editeur extends  JFrame{
-    private JEditorPane editorPane1;
+    private JTextArea editorPane1;
     private JPanel panel1;
     private JTabbedPane Commentaires;
     private JTextArea textArea1;
@@ -17,7 +17,7 @@ public class Editeur extends  JFrame{
     private JPanel Coms;
     private JPanel Comss;
 
-    public JEditorPane getEditorPane1() {
+    public JTextArea getEditorPane1() {
         return editorPane1;
     }
 

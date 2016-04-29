@@ -37,7 +37,7 @@ public class FileContextService {
 
     // The instance file
     private final File fileModel;
-    private final int MODIFICATION_COUNT_BETWEEN_SAVES=5;
+    private final int MODIFICATION_COUNT_BETWEEN_SAVES=0;
     private int modificationsUntilNextUpdate = MODIFICATION_COUNT_BETWEEN_SAVES;
     // fileContent must be persisted every x modifications
     private java.io.File fileIO;

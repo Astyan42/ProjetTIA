@@ -25,7 +25,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="173a0" class="javax.swing.JEditorPane" binding="editorPane1" default-binding="true">
+              <component id="462db" class="javax.swing.JTextArea" binding="editorPane1" default-binding="true">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <minimum-size width="500" height="500"/>
