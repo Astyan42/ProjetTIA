@@ -37,10 +37,18 @@ public class NewUpdate implements Runnable {
                     oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, Integer.parseInt(idProjet)));
                     break;
                 case "fichier":
-                    pseudo = Insert.get(1);
-                    idProjet = Insert.get(2);
-                    name=Insert.get(3);
-                    oos.writeObject(FileService.getInstance().addFile(pseudo,idProjet,name));
+                    pseudo = Insert.get(2);
+                    switch(Insert.get(1)){
+                        case "add":
+                            idProjet = Insert.get(3);
+                            name=Insert.get(4);
+                            oos.writeObject(FileService.getInstance().addFile(pseudo,idProjet,name));
+                            break;
+                        case "remove":
+                            int fileId = Integer.parseInt(Insert.get(3));
+                            oos.writeObject(FileService.getInstance().removeFile(pseudo,fileId));
+                    }
+
                     break;
                 case "collab":
                     // collab,commande,pseudo,type,id,select,droit,admin

@@ -150,4 +150,20 @@ public class FileRepository extends DefaultRepository{
         return arraylist;
     }
 
+    public boolean removeFileById(int fileId) {
+        try {
+            PreparedStatement preparedStatement = this.getConnection().prepareStatement("DELETE FROM fichier WHERE id_fichier = ?");
+            preparedStatement.setInt(1, fileId);
+            preparedStatement.executeQuery();
+
+            preparedStatement = this.getConnection().prepareStatement("DELETE FROM droit_fichier WHERE id_fichier = ?");
+            preparedStatement.setInt(1, fileId);
+            preparedStatement.executeQuery();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

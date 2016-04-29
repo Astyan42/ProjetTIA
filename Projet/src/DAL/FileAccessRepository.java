@@ -74,11 +74,15 @@ public class FileAccessRepository extends DefaultRepository{
     }
 
     public boolean isAdmin(User u, File f){
+        return isAdmin(u,f.id);
+    }
+
+    public boolean isAdmin(User u, int fileId){
         PreparedStatement preparedStatement;
         try {
             preparedStatement = this.getConnection().prepareStatement("SELECT administrateur from droit_fichier where id_util=? And id_fichier=?");
             preparedStatement.setString(1, String.valueOf(u.id));
-            preparedStatement.setString(2, String.valueOf(f.id));
+            preparedStatement.setString(2, String.valueOf(fileId));
             int testDroit;
 
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -95,6 +99,7 @@ public class FileAccessRepository extends DefaultRepository{
             return false;
         }
     }
+
 
     public void RemoveAccess(File file, User selected) {
         PreparedStatement preparedStatement;

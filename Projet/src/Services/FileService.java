@@ -21,21 +21,32 @@ public class FileService {
         return _instance;
     }
 
-    public String addFile(String pseudo, String idProjet, String name) {
+    public Integer addFile(String pseudo, String idProjet, String name) {
         File file = FileRepository.getInstance().add_file(idProjet, name);
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         if (file!=null){
             FileAccessRepository.getInstance().InsertAdminAccess(file, user);
             try {
+                // BUG dans le cas de la création de deux fichiers avec un même nom
                 BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers\\"+file.name)));
                 writer.write("");
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return file.name;
+            return file.id;
         }
         return null;
+    }
+
+
+
+    public boolean removeFile(String pseudo, int fileId){
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        if(FileAccessRepository.getInstance().isAdmin(user,fileId)){
+            return FileRepository.getInstance().removeFileById(fileId);
+        }
+        return false;
     }
 
     public ArrayList<String> getCollaborators(String pseudo, int fileId) {
