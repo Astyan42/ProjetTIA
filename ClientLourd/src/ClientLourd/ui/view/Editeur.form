@@ -34,6 +34,7 @@
                 </constraints>
                 <properties>
                   <background color="-14539475"/>
+                  <caretColor color="-723724"/>
                   <foreground color="-3487030"/>
                 </properties>
               </component>

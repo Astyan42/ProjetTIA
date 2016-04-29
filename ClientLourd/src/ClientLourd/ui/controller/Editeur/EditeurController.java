@@ -82,15 +82,9 @@ public class EditeurController extends Ressource {
                     oos.flush();
                     oos.writeChar(c);
                     oos.flush();
-                    Boolean content = ois.readBoolean();
-                    String query="";
-                    if (content){
+                    Boolean update = ois.readBoolean();
+                    if (update){
                         // demande la mise a jour du fichier au web service
-                        query="update";
-                    }
-                    oos.writeObject(query);
-                    oos.flush();
-                    if (query.equals("update")){
                         String newContent =(String) ois.readObject();
                         editorPane1.setText(newContent);
                         e.setKeyCode(127);

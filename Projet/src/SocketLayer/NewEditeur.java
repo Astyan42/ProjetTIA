@@ -34,20 +34,19 @@ public class NewEditeur implements Runnable {
                 int pos = ois.readInt();
                 char carac = ois.readChar();
 
+
+                boolean maj=fcs.getUpdate();
+                oos.writeBoolean(maj);
+                oos.flush();
+                if(maj){
+                    oos.writeObject(fcs.getFileContent());
+                    oos.flush();
+                    fcs.setUpdate(false);
+                }
                 try {
                     keyboardEvent(pos,carac);
                 }catch (Exception e){e.printStackTrace();}
 
-                boolean maj=fcs.getUpdate();
-                oos.writeBoolean(maj);
-                fcs.setUpdate(false);
-                oos.flush();
-                String query = (String) ois.readObject();
-
-                if(query.equals("update")){
-                    oos.writeObject(fcs.getFileContent());
-                    oos.flush();
-                }
             }
             ois.close();
             oos.close();
