@@ -69,14 +69,18 @@ public class EditeurController extends Ressource {
         editorPane1.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
                 int pos = editorPane1.getCaretPosition();
                 char c = e.getKeyChar();
-                try {
 
-                    ArrayList<String> array = new ArrayList<String>();
-                    array.add(String.valueOf(pos));
-                    array.add(String.valueOf(c));
-                    oos.writeObject(array);
+                try {
+                    oos.writeInt(pos);
+                    oos.flush();
+                    oos.writeChar(c);
                     oos.flush();
                     Boolean content = ois.readBoolean();
                     String query="";
@@ -87,17 +91,13 @@ public class EditeurController extends Ressource {
                     oos.writeObject(query);
                     oos.flush();
                     if (query.equals("update")){
-                        editorPane1.setText((String) ois.readObject());
-                        editorPane1.setCaretPosition(pos);
-                    }else ois.readObject();
+                        String newContent =(String) ois.readObject();
+                        editorPane1.setText(newContent);
+                        e.setKeyCode(127);
+                    }
                 } catch (IOException | ClassNotFoundException e1) {
                     e1.printStackTrace();
                 }
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-
             }
 
             @Override

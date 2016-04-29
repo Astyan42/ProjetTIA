@@ -32,7 +32,7 @@ public class ListeFichiers {
 	    connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
 	    preparedStatement = (PreparedStatement) connexion.prepareStatement( "SELECT id_util FROM utilisateur WHERE mail=?;" );
 	    preparedStatement.setString( 1, mail );
-        resultat = preparedStatement.executeQuery();  
+        resultat = preparedStatement.exe&cuteQuery();
         resultat.next();
         id_utilisateur=resultat.getInt("id_util");
         resultat = null;

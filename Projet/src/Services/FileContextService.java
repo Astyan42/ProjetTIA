@@ -2,13 +2,10 @@ package Services;
 
 import DAL.FileRepository;
 import Model_Objects.File;
-import Model_Objects.User;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -42,12 +39,20 @@ public class FileContextService {
     // fileContent must be persisted every x modifications
     private java.io.File fileIO;
     private StringBuffer fileContent;
+    private Boolean update=false;
+
+    public Boolean getUpdate() {
+        return update;
+    }
+
+    public void setUpdate(Boolean update) {
+        this.update = update;
+    }
 
     private String readFile(java.io.File file) throws IOException {
         StringBuilder fileContents = new StringBuilder((int)file.length());
         Scanner scanner = new Scanner(file);
         String lineSeparator = System.getProperty("line.separator");
-
         try {
             while(scanner.hasNextLine()) {
                 fileContents.append(scanner.nextLine() + lineSeparator);
@@ -58,16 +63,19 @@ public class FileContextService {
         }
     }
 
-    public synchronized void insertCharacter(int position, char c){
+    public synchronized void insertCharacter(int position, char c) throws ArrayIndexOutOfBoundsException{
         fileContent.insert(position,c);
         modificationsUntilNextUpdate --;
         persist();
     }
 
-    public synchronized void deleteCharacter(int position){
-        fileContent.deleteCharAt(position);
-        modificationsUntilNextUpdate --;
-        persist();
+    public synchronized void deleteCharacter(int position,boolean left) throws StringIndexOutOfBoundsException{
+        if (left)if (position>1) position-=1;
+        if (!fileContent.toString().equals("")||!(left && position==0) || !(position==fileContent.toString().length())){
+            fileContent.deleteCharAt(position);
+            modificationsUntilNextUpdate --;
+            persist();
+        }
     }
 
     private void persist() {
@@ -77,6 +85,7 @@ public class FileContextService {
                 bwr.write(fileContent.toString());
                 bwr.flush();
                 bwr.close();
+                update = true ;
                 modificationsUntilNextUpdate = MODIFICATION_COUNT_BETWEEN_SAVES;
             } catch (IOException e) {
                 e.printStackTrace();

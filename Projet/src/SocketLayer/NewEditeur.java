@@ -21,7 +21,6 @@ public class NewEditeur implements Runnable {
 
     @Override
     public void run() {
-
         try {
             ObjectInputStream ois =new ObjectInputStream(socket.getInputStream());
             ObjectOutputStream oos =new ObjectOutputStream(socket.getOutputStream());
@@ -30,28 +29,55 @@ public class NewEditeur implements Runnable {
             fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(fileName).id));
             oos.writeObject(fcs.getFileContent());
             oos.flush();
+
             while (!socket.isClosed()){
-                ArrayList<String> array = new ArrayList<>();
-                array = (ArrayList<String>) ois.readObject();
-                int pos = Integer.parseInt(array.get(0));
-                char carac = array.get(1).charAt(0);
-                fcs.insertCharacter(pos,carac);
+                int pos = ois.readInt();
+                char carac = ois.readChar();
 
-                boolean maj=true;
+                try {
+                    keyboardEvent(pos,carac);
+                }catch (Exception e){e.printStackTrace();}
+
+                boolean maj=fcs.getUpdate();
                 oos.writeBoolean(maj);
+                fcs.setUpdate(false);
                 oos.flush();
+                String query = (String) ois.readObject();
 
-                if (((String) ois.readObject()).equals("update")){
+                if(query.equals("update")){
                     oos.writeObject(fcs.getFileContent());
-
-                }else oos.writeObject("gr");
-                oos.flush();
+                    oos.flush();
+                }
             }
             ois.close();
             oos.close();
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void keyboardEvent(int pos, char carac) {
+        switch (carac){
+            case 9:
+                fcs.insertCharacter(pos,'\t');
+                break;
+            case 13 :
+                fcs.insertCharacter(pos,'\n');
+                break;
+            case 127:
+                fcs.deleteCharacter(pos,false);
+                break;
+            case 8 :
+                fcs.deleteCharacter(pos,true);
+                break;
+            case 32:
+                fcs.insertCharacter(pos,' ');
+                break;
+            default:
+                if (Character.isLetterOrDigit(carac))
+                    fcs.insertCharacter(pos, carac);
+                break;
         }
     }
 }
