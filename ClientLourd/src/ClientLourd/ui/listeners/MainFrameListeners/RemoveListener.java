@@ -36,11 +36,11 @@ public class RemoveListener extends Ressource implements ActionListener {
             oos.flush();
             ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
             Boolean result = ois.readBoolean();
-            if(!result) {
+            if(result) {
                 evtManager.TriggerFolderChangeEvent(ProjectHere);
             }
             else{
-                JOptionPane.showMessageDialog(mainFrame,result+" création impossible",
+                JOptionPane.showMessageDialog(mainFrame,result+" suppression impossible",
                         "error",
                         JOptionPane.ERROR_MESSAGE);
             }

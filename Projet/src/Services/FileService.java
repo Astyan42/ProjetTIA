@@ -36,7 +36,7 @@ public class FileService {
             }
             return file.id;
         }
-        return null;
+        return 0;
     }
 
 

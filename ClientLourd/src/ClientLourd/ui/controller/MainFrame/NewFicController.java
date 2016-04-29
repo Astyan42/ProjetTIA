@@ -45,17 +45,17 @@ public class NewFicController  extends Ressource {
                     oos.writeObject(insert);
                     oos.flush();
                     ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
-                    String result = (String) ois.readObject();
-                    if(!result.equals(null)) {
+                    int result = ois.readInt();
+                    if(result!=0) {
                         newFic.dispose();
                         evtManager.TriggerFolderChangeEvent(ProjectHere);
                     }
                     else{
-                        JOptionPane.showMessageDialog(newFic,result,
+                        JOptionPane.showMessageDialog(newFic,"erreur a la création",
                                 "error",
                                 JOptionPane.ERROR_MESSAGE);
                     }
-                } catch (IOException | ClassNotFoundException e1) {
+                } catch (IOException e1) {
                     e1.printStackTrace();
                 }
             }

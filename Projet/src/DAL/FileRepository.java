@@ -154,11 +154,11 @@ public class FileRepository extends DefaultRepository{
         try {
             PreparedStatement preparedStatement = this.getConnection().prepareStatement("DELETE FROM fichier WHERE id_fichier = ?");
             preparedStatement.setInt(1, fileId);
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
 
             preparedStatement = this.getConnection().prepareStatement("DELETE FROM droit_fichier WHERE id_fichier = ?");
             preparedStatement.setInt(1, fileId);
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
         }
         catch (Exception e){
             e.printStackTrace();

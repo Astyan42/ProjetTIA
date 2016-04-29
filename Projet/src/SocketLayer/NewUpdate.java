@@ -42,11 +42,11 @@ public class NewUpdate implements Runnable {
                         case "add":
                             idProjet = Insert.get(3);
                             name=Insert.get(4);
-                            oos.writeObject(FileService.getInstance().addFile(pseudo,idProjet,name));
+                            oos.writeInt(FileService.getInstance().addFile(pseudo,idProjet,name));
                             break;
                         case "remove":
                             int fileId = Integer.parseInt(Insert.get(3));
-                            oos.writeObject(FileService.getInstance().removeFile(pseudo,fileId));
+                            oos.writeBoolean(FileService.getInstance().removeFile(pseudo,fileId));
                     }
 
                     break;
