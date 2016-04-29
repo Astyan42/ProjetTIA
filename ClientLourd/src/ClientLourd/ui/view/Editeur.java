@@ -17,6 +17,34 @@ public class Editeur extends  JFrame{
     private JPanel Coms;
     private JPanel Comss;
 
+    public JEditorPane getEditorPane1() {
+        return editorPane1;
+    }
+
+    public JPanel getPanel1() {
+        return panel1;
+    }
+
+    public JTabbedPane getCommentaires() {
+        return Commentaires;
+    }
+
+    public JTextArea getTextArea1() {
+        return textArea1;
+    }
+
+    public JButton getEnvoyerButton() {
+        return envoyerButton;
+    }
+
+    public JPanel getComs() {
+        return Coms;
+    }
+
+    public JPanel getComss() {
+        return Comss;
+    }
+
     public Editeur(String fileName, String content, ArrayList<Com> commentaires) {
         setSize(600, 600);
         setLocationRelativeTo(null);
@@ -39,6 +67,7 @@ public class Editeur extends  JFrame{
             Coms.add(commentaires.get(i),c,i);
             Component comi = Coms.getComponent(i);
             comi.setSize(400,400);
+
             comi.setVisible(true);
         }
         Coms.setVisible(true);

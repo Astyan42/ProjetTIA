@@ -1,5 +1,6 @@
 package DAL;
 
+import Model_Objects.File;
 import Model_Objects.Project;
 import Model_Objects.User;
 
@@ -60,7 +61,33 @@ public class ProjectRepository extends DefaultRepository{
         }
         return file;
     }
+    public ArrayList<Project> getProjectsRootForUser(int userId){
+        Connection connection = this.getConnection();
+        ArrayList<Project> arrayList= new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT projet.id_projet,nom,id_pere FROM acces_projet,projet WHERE acces_projet.id_projet=projet.id_projet AND id_util=?;");
+            preparedStatement.setInt(1, userId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int id = resultSet.getInt(1);
+                String nom = resultSet.getString(2);
+                int id_pere = resultSet.getInt(3);
+                int exist=0;
+                for (Project project : ProjectRepository.getInstance().getProjectsForUser(userId)){
+                    if(project.id_projet==id_pere) exist=1;
+                }
+                if (exist==0&&id_pere!=0) {
+                    Project project = new Project(id,nom,id_pere);
+                    arrayList.add(project);
+                }
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return arrayList;
 
+    }
     public ArrayList<Project> getProjectsForUser(int userId){
         Connection connection = this.getConnection();
         ArrayList<Project> arrayList= new ArrayList<>();

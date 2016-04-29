@@ -10,23 +10,18 @@ import java.util.ArrayList;
 
 
 public class EditerListener extends Ressource implements ActionListener {
+    private String fic;
+    public EditerListener(String fic) {
+        this.fic=fic;
+    }
+
     /**
      * invoque la fenetre Editeur
      * @param e
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        String Content="ceci est le contenu du fichier en string";
-        ArrayList<Com> commentaires= new ArrayList<>();
-        commentaires.add(new Com("com","pseudo ","date"));
-        commentaires.add(new Com("com","pseudo ","date"));
-        commentaires.add(new Com("com","pseudo ","date"));
-        commentaires.add(new Com("com","pseudo ","date"));
-        commentaires.add(new Com("com","pseudo ","date"));
-        commentaires.add(new Com("com","pseudo ","date"));
-
-        new EditeurController("file.txt",Content,commentaires);
+        new EditeurController(fic);
     }
 }
 

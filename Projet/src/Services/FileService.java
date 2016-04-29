@@ -5,6 +5,9 @@ import Model_Objects.File;
 import Model_Objects.Project;
 import Model_Objects.User;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class FileService {
@@ -23,6 +26,13 @@ public class FileService {
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         if (file!=null){
             FileAccessRepository.getInstance().InsertAdminAccess(file, user);
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers\\"+file.name)));
+                writer.write("");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return file.name;
         }
         return null;
@@ -64,5 +74,6 @@ public class FileService {
         }else return  "vous n'etes pas admin vous ne pouvez pas ajouter de collaborateur";
         return null;
     }
+
 
 }

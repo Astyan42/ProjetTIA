@@ -61,21 +61,16 @@ public class FileContextService {
     public synchronized void insertCharacter(int position, char c){
         fileContent.insert(position,c);
         modificationsUntilNextUpdate --;
-        if(modificationsUntilNextUpdate < 0){
-            try {
-                BufferedWriter bwr = new BufferedWriter(new FileWriter(fileIO));
-                bwr.write(fileContent.toString());
-                bwr.flush();
-                bwr.close();
-                modificationsUntilNextUpdate = MODIFICATION_COUNT_BETWEEN_SAVES;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        persist();
     }
 
     public synchronized void deleteCharacter(int position){
         fileContent.deleteCharAt(position);
+        modificationsUntilNextUpdate --;
+        persist();
+    }
+
+    private void persist() {
         if(modificationsUntilNextUpdate < 0){
             try {
                 BufferedWriter bwr = new BufferedWriter(new FileWriter(fileIO));

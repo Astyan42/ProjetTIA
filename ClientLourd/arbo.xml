@@ -2,13 +2,18 @@
 <!DOCTYPE arborescence SYSTEM "dtd_arborescence.dtd">
 <arborescence>
 <projet idp="0" name="/">
-	<projet idp="5" name="toto">
-		<projet idp="7" name="folder">
-		</projet>
-		<fichier idf="11" name="bitocu"/>
+	<projet idp="7" name="il vois">
+		<fichier idf="15" name="azerfge"/>
  	</projet>
-	<projet idp="6" name="test">
-	</projet>
-	<fichier idf="12" name="truc"/>
+	<projet idp="1" name="Vialla">
+		<projet idp="2" name="Austiste">
+		</projet>
+		<projet idp="3" name="Clement ne vois pas">
+		</projet>
+		<projet idp="4" name="clement vois">
+		</projet>
+		<fichier idf="13" name="pauline"/>
+ 	</projet>
+	<fichier idf="16" name="pseudo le vois.text"/>
  </projet>
 </arborescence>

@@ -86,7 +86,6 @@ public class ProjectAccessRepository extends DefaultRepository{
             preparedStatement.setInt(1, u.id);
             preparedStatement.setInt(2, p.id_projet);
             int testDroit;
-
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 testDroit = resultSet.getInt(1);

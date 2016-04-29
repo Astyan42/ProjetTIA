@@ -73,7 +73,6 @@ public class EventManager extends Ressource {
 
             String XMLString = (String) ois.readObject();
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File("arbo.xml")));
-// normalement si le fichier n'existe pas, il est crée à la racine du projet
             writer.write(XMLString);
 
             writer.close();

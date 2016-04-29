@@ -4,6 +4,7 @@ import ClientLourd.ui.Ressource;
 import ClientLourd.ui.controller.XmlArboController;
 import ClientLourd.ui.interfaces.IFolderChangeListener;
 import ClientLourd.ui.listeners.MainFrameListeners.CollaborationListener;
+import ClientLourd.ui.listeners.MainFrameListeners.EditerListener;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
@@ -56,6 +57,7 @@ public class FileListController extends Ressource implements IFolderChangeListen
                     JPopupMenu editMenu = new JPopupMenu();
                     JMenuItem editItem = new JMenuItem("Editer");
                     editItem.setActionCommand("Editer");
+                    editItem.addActionListener(new EditerListener(o.toString()));
                     JMenuItem collabItem = new JMenuItem("Droits");
                     collabItem.setActionCommand("Droits");
                     collabItem.addActionListener(new CollaborationListener(o.toString(),"fichier"));

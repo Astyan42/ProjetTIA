@@ -81,7 +81,6 @@ public class MainFrameController extends Ressource implements IFolderChangeListe
         nouveauProjectButton.addActionListener(new NewProjectlistener());
         nouveauFicButtun.addActionListener(new NewFicListener());
         collaborationButton.addActionListener(new CollaborationListener(ProjectHere,"projet"));
-        editerButton.addActionListener(new EditerListener());
         retourButton.addActionListener(new RetourListener());
 
         evtManager.AddFolderChangeListener(arianneController);
