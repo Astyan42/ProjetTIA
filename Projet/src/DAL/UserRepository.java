@@ -7,9 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class UserRepository extends DefaultRepository{
     private UserRepository(){
 

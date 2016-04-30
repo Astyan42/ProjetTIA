@@ -1,8 +1,5 @@
 package Model_Objects;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class User {
     public int id;
     public String mail;

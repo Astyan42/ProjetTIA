@@ -8,9 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class FileAccessRepository extends DefaultRepository{
     private FileAccessRepository(){
         

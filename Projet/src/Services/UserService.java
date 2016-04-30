@@ -3,9 +3,6 @@ package Services;
 import DAL.UserRepository;
 import Model_Objects.User;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class UserService {
     private static UserService _instance;
 

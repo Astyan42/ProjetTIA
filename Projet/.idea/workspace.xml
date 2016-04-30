@@ -3,39 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="3967c5df-52c4-4693-85a2-a6180e886d31" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Services/FileContextService.java" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/Arborecence.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/src/Model_Objects/Curseur.java" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewXmlUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/XmlUpdateSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/Connect.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewXmlUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/XmlUpdateSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewEditeur.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/BddRequest/Connect.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/BddRequest/Arborecence.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewConnectionThread.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewChat.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/EditeurSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/ChatSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/ConnectionSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/InsertBDD.class" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewEditeur.class" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/ConnectionSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewChat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewXmlUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/XmlUpdateSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/UpdateSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/InsertBDD.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/XmlUpdateSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/EditeurSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/Connect.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/BddRequest/Connect.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/ChatSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/ChatSocket.class" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/BddRequest/InsertBDD.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/UpdateSocket.class" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewChat.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/EditeurSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/BddRequest/Arborecence.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/ChatSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/BddRequest/Arborecence.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/Sockets/EditeurSocket.class" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/classes/artifacts/unnamed/WebServices/Threads/NewConnectionThread.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewEditeur.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/ConnectionSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/src/Model_Objects/Curseur.java" afterPath="" />
       <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/Sockets/UpdateSocket.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewXmlUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="C:/Users/jdeveaux/Desktop/Projet TIA/Projet/WebContent/WEB-INF/classes/WebServices/Threads/NewConnectionThread.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ClientLourd/arbo.xml" afterPath="$PROJECT_DIR$/../ClientLourd/arbo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Services/UserService.java" afterPath="$PROJECT_DIR$/src/Services/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/DAL/ProjectAccessRepository.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/DAL/ProjectAccessRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ClientLourd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClientLourd/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model_Objects/File.java" afterPath="$PROJECT_DIR$/src/Model_Objects/File.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ClientLourd/arbo.xml" afterPath="$PROJECT_DIR$/../ClientLourd/arbo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/DAL/ProjectAccessRepository.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/DAL/ProjectAccessRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewEditeur.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="15" selection-end-column="35" />
+              <caret line="80" column="5" selection-start-line="57" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -85,51 +85,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAL/FileRepository.java">
+      <file leaf-file-name="NewXmlUpdate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewXmlUpdate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <marker date="1461932203364" expanded="true" signature="768:841" placeholder="INSERT INTO fichier... " />
-                <marker date="1461932203364" expanded="true" signature="1710:1750" placeholder="SELECT * FRO... fichier" />
-                <marker date="1461932203364" expanded="true" signature="2540:2573" placeholder="SELECT * FRO... fichier" />
-                <marker date="1461932203364" expanded="true" signature="3352:3566" placeholder="SELECT fichi... fichier" />
-                <marker date="1461932203364" expanded="true" signature="4765:4995" placeholder="SELECT fichi... fichier" />
-                <marker date="1461932203364" expanded="true" signature="5837:5877" placeholder="DELETE FROM " />
-                <marker date="1461932203364" expanded="true" signature="6049:6095" placeholder="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Services/FileService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditeurSocket.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java">
+      <file leaf-file-name="Chat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Chat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2037037">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditeurWebSocket.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditeurWebSocket.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,19 +127,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileAccessRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAL/FileAccessRepository.java">
+      <file leaf-file-name="FileContextService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-              <folding>
-                <marker date="1461932113856" expanded="true" signature="777:895" placeholder="INSERT INTO droit_fichier... " />
-                <marker date="1461932113856" expanded="true" signature="1355:1466" placeholder="INSERT INTO droit_fichier... " />
-                <marker date="1461932113856" expanded="true" signature="2106:2341" placeholder="SELECT utili... utilisateur" />
-                <marker date="1461932113856" expanded="true" signature="2989:3062" placeholder="SELECT admin... droit_fichier" />
-                <marker date="1461932113856" expanded="true" signature="3812:3870" placeholder="DELETE FROM " />
-                <marker date="1461932113856" expanded="true" signature="4330:4424" placeholder="UPDATE droit... " />
-              </folding>
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WebServices/WebService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewChat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewChat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewConnectionThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewConnectionThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,9 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/WebServices/Threads/Sockets/EditeurSocket.java" />
-        <option value="$PROJECT_DIR$/src/WebServices/Threads/Sockets/ConnectionSocket.java" />
-        <option value="$PROJECT_DIR$/src/WebServices/Threads/Sockets/ChatSocket.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Chat/Message.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Chat/Chat.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Ressources/SocketInit.java" />
@@ -186,9 +196,6 @@
         <option value="$PROJECT_DIR$/src/WebServices/Threads/NewXmlUpdate.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Threads/Sockets/UpdateSocket.java" />
         <option value="$PROJECT_DIR$/src/WebServices/BddRequest/Arborecence.java" />
-        <option value="$PROJECT_DIR$/src/DAL/DefaultRepository.java" />
-        <option value="$PROJECT_DIR$/src/Model_Objects/User.java" />
-        <option value="$PROJECT_DIR$/src/DAL/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/DAL/Project_Repository.java" />
         <option value="$PROJECT_DIR$/src/Services/Project_Service.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Ressources/BddRessources.java" />
@@ -198,33 +205,39 @@
         <option value="$PROJECT_DIR$/src/WebServices/BddRequest/Inscription.java" />
         <option value="$PROJECT_DIR$/src/WebServices/BddRequest/Arborescence.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Threads/NewUpdate.java" />
-        <option value="$PROJECT_DIR$/src/Model_Objects/Project.java" />
         <option value="$PROJECT_DIR$/src/WebServices/BddRequest/InsertBDD.java" />
         <option value="$PROJECT_DIR$/src/Socket/NewUpdate.java" />
         <option value="$PROJECT_DIR$/src/Socket/Sockets/ChatSocket.java" />
         <option value="$PROJECT_DIR$/src/Socket/NewConnectionThread.java" />
         <option value="$PROJECT_DIR$/src/Socket/Sockets/ConnectionSocket.java" />
-        <option value="$PROJECT_DIR$/src/WebServices/WebService.java" />
         <option value="$PROJECT_DIR$/src/SocketLayer/NewXmlUpdate.java" />
-        <option value="$PROJECT_DIR$/src/DAL/FileAccessRepository.java" />
-        <option value="$PROJECT_DIR$/src/Services/ProjectService.java" />
-        <option value="$PROJECT_DIR$/src/Services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/Model_Objects/File.java" />
         <option value="$PROJECT_DIR$/src/Model_Objects/Curseur.java" />
         <option value="$PROJECT_DIR$/src/Model_Objects/Carret.java" />
-        <option value="$PROJECT_DIR$/src/DAL/ProjectAccessRepository.java" />
         <option value="$PROJECT_DIR$/src/DAL/ProjectRepository.java" />
         <option value="$PROJECT_DIR$/src/Services/ArborescenceService.java" />
         <option value="$PROJECT_DIR$/fichiers/pauline" />
         <option value="$PROJECT_DIR$/src/WebServices/BddRequest/ListeFichiers.java" />
         <option value="$PROJECT_DIR$/fichiers/pseudo le vois.text" />
-        <option value="$PROJECT_DIR$/src/Services/FileContextService.java" />
-        <option value="$PROJECT_DIR$/src/SocketLayer/NewEditeur.java" />
-        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java" />
         <option value="$PROJECT_DIR$/src/DAL/FileRepository.java" />
         <option value="$PROJECT_DIR$/src/SocketLayer/NewUpdate.java" />
-        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java" />
         <option value="$PROJECT_DIR$/src/Services/FileService.java" />
+        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/projet/servlets/Index.java" />
+        <option value="$PROJECT_DIR$/src/projet/servlets/Connexion.java" />
+        <option value="$PROJECT_DIR$/src/Model_Objects/File.java" />
+        <option value="$PROJECT_DIR$/src/Model_Objects/Project.java" />
+        <option value="$PROJECT_DIR$/src/DAL/DefaultRepository.java" />
+        <option value="$PROJECT_DIR$/src/DAL/FileAccessRepository.java" />
+        <option value="$PROJECT_DIR$/src/DAL/ProjectAccessRepository.java" />
+        <option value="$PROJECT_DIR$/src/DAL/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/Model_Objects/User.java" />
+        <option value="$PROJECT_DIR$/src/Services/FileContextService.java" />
+        <option value="$PROJECT_DIR$/src/Services/ProjectService.java" />
+        <option value="$PROJECT_DIR$/src/Services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/WebServices/WebService.java" />
+        <option value="$PROJECT_DIR$/src/SocketLayer/NewEditeur.java" />
+        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java" />
       </list>
     </option>
   </component>
@@ -253,6 +266,103 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code style issuesCSS</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Dependency issuesJava</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>Invalid elementsCSS</id>
+          </State>
+          <State>
+            <id>JBoss Seam issues</id>
+          </State>
+          <State>
+            <id>JSP Inspections</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -278,6 +388,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -343,11 +454,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="Site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,6 +473,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WebServices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ressources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -440,6 +591,50 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model_Objects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -475,7 +670,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -483,7 +677,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/apache-tomcat-8.0.33/lib/websocket-api.jar!/" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -958,7 +1152,7 @@
       <method />
     </configuration>
     <configuration default="false" name="Client Leger" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.33" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:2020/Site/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:7070/Site/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="tomcat">
@@ -969,7 +1163,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_Projet_2" />
-        <option name="HTTP_PORT" value="2020" />
+        <option name="HTTP_PORT" value="7070" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1060,12 +1254,13 @@
       <workItem from="1461885212596" duration="21299000" />
       <workItem from="1461919689664" duration="17241000" />
       <workItem from="1461955888580" duration="1229000" />
-      <workItem from="1461977599540" duration="45000" />
+      <workItem from="1461977599540" duration="1371000" />
+      <workItem from="1462008688245" duration="6355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132163000" />
+    <option name="totallyTimeSpent" value="139844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1073,30 +1268,30 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26004228" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25158563" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39852008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39852008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25687104" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1112,14 +1307,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Services/FileContextService.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
@@ -1129,16 +1316,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1154,12 +1331,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
           <folding>
-            <marker date="1461932113856" expanded="true" signature="777:895" placeholder="INSERT INTO droit_fichier... " />
-            <marker date="1461932113856" expanded="true" signature="1355:1466" placeholder="INSERT INTO droit_fichier... " />
-            <marker date="1461932113856" expanded="true" signature="2106:2341" placeholder="SELECT utili... utilisateur" />
-            <marker date="1461932113856" expanded="true" signature="2989:3062" placeholder="SELECT admin... droit_fichier" />
-            <marker date="1461932113856" expanded="true" signature="3812:3870" placeholder="DELETE FROM " />
-            <marker date="1461932113856" expanded="true" signature="4330:4424" placeholder="UPDATE droit... " />
+            <marker date="1462014139613" expanded="true" signature="731:849" placeholder="INSERT INTO droit_fichier... " />
+            <marker date="1462014139613" expanded="true" signature="1309:1420" placeholder="INSERT INTO droit_fichier... " />
+            <marker date="1462014139613" expanded="true" signature="2060:2295" placeholder="SELECT utili... utilisateur" />
+            <marker date="1462014139613" expanded="true" signature="2943:3016" placeholder="SELECT admin... droit_fichier" />
+            <marker date="1462014139613" expanded="true" signature="3766:3824" placeholder="DELETE FROM " />
+            <marker date="1462014139613" expanded="true" signature="4284:4378" placeholder="UPDATE droit... " />
           </folding>
         </state>
       </provider>
@@ -1169,7 +1346,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1461891893308" expanded="true" signature="834:894" placeholder="INSERT INTO projet... " />
             <marker date="1461891893308" expanded="true" signature="1631:1669" placeholder="SELECT * FRO... projet" />
             <marker date="1461891893308" expanded="true" signature="2391:2511" placeholder="SELECT proje... acces_projet" />
@@ -1200,45 +1376,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/Site/Index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02660407">
-          <caret line="1" column="132" selection-start-line="1" selection-start-column="132" selection-end-line="1" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/beans/Utilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1263,50 +1404,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model_Objects/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WebServices/Ressources/BddRessources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebServices/WebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model_Objects/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,103 +1418,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewXmlUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/ProjectAccessRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.448276">
-          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/ProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1461891893308" expanded="true" signature="834:894" placeholder="INSERT INTO projet... " />
-            <marker date="1461891893308" expanded="true" signature="1631:1669" placeholder="SELECT * FRO... projet" />
-            <marker date="1461891893308" expanded="true" signature="2391:2511" placeholder="SELECT proje... acces_projet" />
-            <marker date="1461891893308" expanded="true" signature="3594:3714" placeholder="SELECT proje... acces_projet" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/DefaultRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37777779">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/ArborescenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56">
-          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-          <folding>
-            <element signature="method#repeat#0;class#ArborescenceService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model_Objects/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5288889">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewConnectionThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3525926">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/servlets/liste_fichiers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65481484">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/projet/servlets/test_bdd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10074074">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Deconnexion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1446,39 +1454,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093333334">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Compte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1437037">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Connexion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025185185">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewUpdate.java">
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Site/Index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewEditeur.java">
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5660377">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/taglibs.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="15" selection-end-column="35" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1499,6 +1504,158 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/ProjectAccessRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1462014139951" expanded="true" signature="838:920" placeholder="INSERT INTO acces_projet... " />
+            <marker date="1462014139951" expanded="true" signature="1502:1577" placeholder="INSERT INTO acces_projet... " />
+            <marker date="1462014139951" expanded="true" signature="2259:2491" placeholder="SELECT utili... utilisateur" />
+            <marker date="1462014139951" expanded="true" signature="3077:3139" placeholder="SELECT admin... acces_projet" />
+            <marker date="1462014139951" expanded="true" signature="3860:3916" placeholder="DELETE FROM " />
+            <marker date="1462014139951" expanded="true" signature="4391:4467" placeholder="UPDATE acces... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/ProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.75">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+          <folding>
+            <marker date="1461891893308" expanded="true" signature="834:894" placeholder="INSERT INTO projet... " />
+            <marker date="1461891893308" expanded="true" signature="1631:1669" placeholder="SELECT * FRO... projet" />
+            <marker date="1461891893308" expanded="true" signature="2391:2511" placeholder="SELECT proje... acces_projet" />
+            <marker date="1461891893308" expanded="true" signature="3594:3714" placeholder="SELECT proje... acces_projet" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Connexion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.375">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Tchat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.775">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/DefaultRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.075">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/FileAccessRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1462014139613" expanded="true" signature="731:849" placeholder="INSERT INTO droit_fichier... " />
+            <marker date="1462014139613" expanded="true" signature="1309:1420" placeholder="INSERT INTO droit_fichier... " />
+            <marker date="1462014139613" expanded="true" signature="2060:2295" placeholder="SELECT utili... utilisateur" />
+            <marker date="1462014139613" expanded="true" signature="2943:3016" placeholder="SELECT admin... droit_fichier" />
+            <marker date="1462014139613" expanded="true" signature="3766:3824" placeholder="DELETE FROM " />
+            <marker date="1462014139613" expanded="true" signature="4284:4378" placeholder="UPDATE droit... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1462014139590" expanded="true" signature="694:744" placeholder="SELECT * FRO... utilisateur" />
+            <marker date="1462014139590" expanded="true" signature="1487:1544" placeholder="INSERT INTO utilisateur... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model_Objects/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model_Objects/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model_Objects/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/beans/Utilisateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Compte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Deconnexion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projet/servlets/liste_fichiers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/ArborescenceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+          <folding>
+            <element signature="method#repeat#0;class#ArborescenceService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Services/FileService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1507,35 +1664,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/FileAccessRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/Services/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          <folding>
-            <marker date="1461932113856" expanded="true" signature="777:895" placeholder="INSERT INTO droit_fichier... " />
-            <marker date="1461932113856" expanded="true" signature="1355:1466" placeholder="INSERT INTO droit_fichier... " />
-            <marker date="1461932113856" expanded="true" signature="2106:2341" placeholder="SELECT utili... utilisateur" />
-            <marker date="1461932113856" expanded="true" signature="2989:3062" placeholder="SELECT admin... droit_fichier" />
-            <marker date="1461932113856" expanded="true" signature="3812:3870" placeholder="DELETE FROM " />
-            <marker date="1461932113856" expanded="true" signature="4330:4424" placeholder="UPDATE droit... " />
-          </folding>
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewXmlUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WebServices/WebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewConnectionThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/NewEditeur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="5" selection-start-line="57" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2037037">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.4">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

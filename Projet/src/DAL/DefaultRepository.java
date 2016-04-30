@@ -6,9 +6,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class DefaultRepository {
     public Connection getConnection(){
         try {

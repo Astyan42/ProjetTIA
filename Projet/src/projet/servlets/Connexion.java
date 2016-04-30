@@ -15,7 +15,7 @@ import projet.beans.Utilisateur;
 /**
  * Servlet implementation class Connexion
  */
-@WebServlet("/Connexion")
+@WebServlet(name = "Connexion")
 public class Connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String ATT_USER         = "utilisateur";

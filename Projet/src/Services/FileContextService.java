@@ -10,9 +10,6 @@ import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/**
- * Created by jdeveaux on 29/04/2016.
- */
 public class FileContextService {
     private static final ConcurrentMap<String, FileContextService> multitons = new ConcurrentHashMap<>();
 

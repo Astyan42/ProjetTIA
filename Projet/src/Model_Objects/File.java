@@ -2,9 +2,6 @@ package Model_Objects;
 
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class File {
     public int id;
     public int projectId;

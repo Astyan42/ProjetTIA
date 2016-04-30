@@ -7,9 +7,6 @@ import Model_Objects.User;
 
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class ProjectService {
 
     private static ProjectService _instance;

@@ -53,13 +53,13 @@ public class EditeurController extends Ressource {
     }
 
     private void initComponent() {
-        editorPane1 =editeur.getEditorPane1();
-        panel1 =editeur.getPanel1();
-        Commentaires =editeur.getCommentaires();
-        textArea1 =editeur.getTextArea1();
-        envoyerButton =editeur.getEnvoyerButton();
-        Coms=editeur.getComs();
-        Comss =editeur.getComss();
+        editorPane1 = editeur.getEditorPane1();
+        panel1 = editeur.getPanel1();
+        Commentaires = editeur.getCommentaires();
+        textArea1 = editeur.getTextArea1();
+        envoyerButton = editeur.getEnvoyerButton();
+        Coms= editeur.getComs();
+        Comss = editeur.getComss();
     }
 
     private void initController() {

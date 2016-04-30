@@ -9,9 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class ProjectAccessRepository extends DefaultRepository{
     private ProjectAccessRepository(){
         

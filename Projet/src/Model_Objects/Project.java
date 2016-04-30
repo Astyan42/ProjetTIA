@@ -1,8 +1,5 @@
 package Model_Objects;
 
-/**
- * Created by jdeveaux on 28/04/2016.
- */
 public class Project {
     public String nom;
     public int id_projet;
