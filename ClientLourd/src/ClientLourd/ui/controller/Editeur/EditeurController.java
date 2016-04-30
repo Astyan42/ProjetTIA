@@ -12,13 +12,14 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.net.Socket;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 @ClientEndpoint
-public class EditeurController extends Ressource {
+public class EditeurController extends Ressource implements Serializable {
     private final Editeur editeur;
     private JPanel Comss;
     private JPanel Coms;
@@ -42,7 +43,7 @@ public class EditeurController extends Ressource {
         String content="";
         try {
             WebSocketContainer container= ContainerProvider.getWebSocketContainer();
-            container.connectToServer(this, new URI(uri));
+            session = container.connectToServer(this , new URI(uri));
 
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
