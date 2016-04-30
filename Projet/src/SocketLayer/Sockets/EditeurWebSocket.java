@@ -15,17 +15,35 @@ import java.io.IOException;
 public class EditeurWebSocket {
     private Session session;
     private FileContextService fcs;
+    private static EditeurWebSocket _instance;
+
+    public EditeurWebSocket() {
+    }
+
+    public static EditeurWebSocket getInstance() {
+        if(_instance == null){
+            _instance = new EditeurWebSocket();
+        }
+        return _instance;
+    }
 
     @OnOpen
-    public void onOpen(Session session,String fileName){
-        this.session = session;;
-        fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(fileName).id));
+    public void onOpen(Session session){
+        System.out.println("nouvelle connexion WS editeur");
+        this.session = session;
     }
 
     @OnMessage
     public void onMessage(String message) {
-        int pos = 0;
-        char c = 'a';
+
+        String[] vars = message.split("-");
+        if(vars.length==1){
+            fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(vars[0]).id));
+            sendMessage(fcs.getFileContent());
+            return;
+        }
+        int pos = Integer.parseInt(vars[0]);
+        char c = (char) Integer.parseInt(vars[1]);
 
         keyboardEvent(pos,c);
 

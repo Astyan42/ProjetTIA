@@ -2,9 +2,15 @@
   <library name="mysql-connector-java-5.1.38-bin">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar!/" />
-      <root url="jar://C:/Program Files (x86)/apache-tomcat-8.0.33/lib/websocket-api.jar!/" />
+      <root url="file://C:/wamp/apache-tomcat-8.0.32/lib" />
+      <root url="file://C:/wamp/apache-tomcat-8.0.32/bin" />
     </CLASSES>
     <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/wamp/apache-tomcat-8.0.32/bin" />
+    </NATIVE>
     <SOURCES />
+    <jarDirectory url="file://C:/wamp/apache-tomcat-8.0.32/bin" recursive="false" />
+    <jarDirectory url="file://C:/wamp/apache-tomcat-8.0.32/lib" recursive="false" />
   </library>
 </component>

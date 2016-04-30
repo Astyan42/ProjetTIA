@@ -17,6 +17,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
+@ClientEndpoint
 public class EditeurController extends Ressource {
     private final Editeur editeur;
     private JPanel Comss;
@@ -32,23 +33,23 @@ public class EditeurController extends Ressource {
     private ObjectInputStream ois;
 
     // webSocket
-    private final String uri="ws\\\\:localhost:2020\\Editeur";
+    private final String uri="ws://localhost:8080/Editeur";
     private Session session;
     public EditeurController(String name) {
         ArrayList<Com> commentaires=new ArrayList<>();
         String content="";
         try {
-
             WebSocketContainer container= ContainerProvider.getWebSocketContainer();
             container.connectToServer(this, new URI(uri));
 
-            initComponent();
-            initController();
-            initListener();
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
         }
+        sendMessage(name);
         editeur = new Editeur(name,content,commentaires);
+        initComponent();
+        initController();
+        initListener();
         new ChatController();
     }
 

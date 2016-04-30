@@ -15,12 +15,12 @@ import projet.beans.Utilisateur;
 /**
  * Servlet implementation class Connexion
  */
-@WebServlet(name = "Connexion")
+@WebServlet("/Connexion")
 public class Connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String ATT_USER         = "utilisateur";
 	public static final String ATT_SESSION_USER = "sessionUtilisateur";
-	public static final String VUE              = "/index";
+	public static final String VUE              = "/Index";
        
     /**
      * @see HttpServlet#HttpServlet()

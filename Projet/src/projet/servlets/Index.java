@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Index")
 public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public static final String VUE = "/Site/Index.jsp";
+	public static final String VUE = "/Site/index.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()

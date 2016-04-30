@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--suppress WebProperties -->
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <servlet>
+    <servlet-name>Tchat</servlet-name>
+    <servlet-class>projet.servlets.Tchat</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>
-      <include-prelude>WEB-INF/taglibs.jsp</include-prelude>
+      <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
     </jsp-property-group>
   </jsp-config>
+  <servlet>
+    <servlet-name>WebService</servlet-name>
+    <servlet-class>WebServices.WebService</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>Index</welcome-file>
+  </welcome-file-list>
 </web-app>
