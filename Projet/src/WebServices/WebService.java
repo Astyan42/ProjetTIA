@@ -21,7 +21,6 @@ public class WebService extends GlobalRessources implements Servlet {
         new Thread(new UpdateSocket()).start();
     }
 
-    @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         new Thread(new ConnectionSocket()).start();
         new Thread(new XmlUpdateSocket()).start();
@@ -30,22 +29,18 @@ public class WebService extends GlobalRessources implements Servlet {
         new Thread(new UpdateSocket()).start();
     }
 
-    @Override
     public ServletConfig getServletConfig() {
         return null;
     }
 
-    @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 
     }
 
-    @Override
     public String getServletInfo() {
         return null;
     }
 
-    @Override
     public void destroy() {
 
     }

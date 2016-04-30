@@ -33,8 +33,10 @@ public class EditeurController extends Ressource {
     private ObjectInputStream ois;
 
     // webSocket
-    private final String uri="ws://localhost:8080/Editeur";
+    private final String uri="ws://localhost:7070/Editeur";
     private Session session;
+    
+
     public EditeurController(String name) {
         ArrayList<Com> commentaires=new ArrayList<>();
         String content="";
