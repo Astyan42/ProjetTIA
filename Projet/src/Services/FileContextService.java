@@ -15,7 +15,7 @@ public class FileContextService {
 
     private FileContextService(String fileId) {
         this.fileModel = FileRepository.getInstance().getFileById(fileId);
-        this.fileIO = new java.io.File(this.fileModel.path);
+        this.fileIO = new java.io.File("../"+this.fileModel.path);
         String temp = "";
         try {
             temp = this.readFile(this.fileIO);

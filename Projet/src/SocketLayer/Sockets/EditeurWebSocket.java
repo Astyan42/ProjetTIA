@@ -34,8 +34,8 @@ public class EditeurWebSocket {
     }
 
     @OnMessage
-    public void onMessage(String message) {
-
+    public void onMessage(String message, Session session) {
+        System.out.println("Message Received :" + message);
         String[] vars = message.split("-");
         if(vars.length==1){
             fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(vars[0]).id));
@@ -56,8 +56,8 @@ public class EditeurWebSocket {
 
     public void sendMessage(String message){
         try {
-            session.getBasicRemote().sendObject(message);
-        } catch (IOException | EncodeException ex) {
+            session.getBasicRemote().sendText(message);
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }

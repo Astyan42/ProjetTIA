@@ -29,7 +29,7 @@ public class FileService {
             try {
                 // BUG dans le cas de la création de deux fichiers avec un même nom
                 new java.io.File("fichiers").mkdir();
-                BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers\\"+file.name)));
+                BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers/"+file.name)));
                 writer.write("");
                 writer.close();
             } catch (IOException e) {

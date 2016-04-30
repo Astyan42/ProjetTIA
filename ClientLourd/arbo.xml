@@ -15,5 +15,7 @@
 		<fichier idf="13" name="pauline"/>
  	</projet>
 	<fichier idf="16" name="blabla"/>
+ 	<fichier idf="17" name="erf"/>
+ 	<fichier idf="18" name="gregre"/>
  </projet>
 </arborescence>

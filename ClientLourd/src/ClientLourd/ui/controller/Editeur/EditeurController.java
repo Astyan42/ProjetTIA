@@ -75,13 +75,14 @@ public class EditeurController extends Ressource implements Serializable {
 
     @OnMessage
     public void onMessage(String message, Session session){
-        editorPane1.setText(message);
+
+        System.out.println("Message Received :\n" + message);editorPane1.setText(message);
     }
 
     public void sendMessage(String message){
         try {
-            session.getBasicRemote().sendObject(message);
-        } catch (IOException | EncodeException ex) {
+            session.getBasicRemote().sendText(message);
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
@@ -97,7 +98,6 @@ public class EditeurController extends Ressource implements Serializable {
                 int pos = editorPane1.getCaretPosition();
                 char c = e.getKeyChar();
                 String array = pos+"-"+c;
-
                 sendMessage(array);
             }
 
