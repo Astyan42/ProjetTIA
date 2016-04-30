@@ -28,6 +28,7 @@ public class FileService {
             FileAccessRepository.getInstance().InsertAdminAccess(file, user);
             try {
                 // BUG dans le cas de la création de deux fichiers avec un même nom
+                new java.io.File("fichiers").mkdir();
                 BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers\\"+file.name)));
                 writer.write("");
                 writer.close();
@@ -38,8 +39,6 @@ public class FileService {
         }
         return 0;
     }
-
-
 
     public boolean removeFile(String pseudo, int fileId){
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
