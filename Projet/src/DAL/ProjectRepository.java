@@ -153,4 +153,32 @@ public class ProjectRepository extends DefaultRepository{
 
     }
 
+
+    public boolean removeProjectById(int projetID) {
+        try {
+            PreparedStatement preparedStatement = this.getConnection().prepareStatement("DELETE FROM acces_projet WHERE id_projet = ?");
+            preparedStatement.setInt(1, projetID);
+            preparedStatement.executeUpdate();
+
+            preparedStatement = this.getConnection().prepareStatement("DELETE FROM fichier WHERE id_projet = ?");
+            preparedStatement.setInt(1, projetID);
+            preparedStatement.executeUpdate();
+            preparedStatement = this.getConnection().prepareStatement("DELETE FROM projet WHERE id_projet = ?");
+            preparedStatement.setInt(1, projetID);
+            preparedStatement.executeUpdate();
+
+            preparedStatement = this.getConnection().prepareStatement("SELECT id_projet FROM projet WHERE id_pere=?;");
+            preparedStatement.setInt(1, projetID);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int childId = resultSet.getInt(1);
+                removeProjectById(childId);
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

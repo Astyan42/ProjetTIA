@@ -1,0 +1,10 @@
+<!ELEMENT dtd_arborescence (arborescence)>
+<!ELEMENT arborescence (projet*,fichier*)>
+<!ELEMENT projet (projet*,fichier*)>
+<!ATTLIST projet idp ID #REQUIRED>
+<!ATTLIST projet name CDATA #REQUIRED>
+
+<!ELEMENT fichier (#PCDATA)>
+<!ATTLIST fichier idf ID #REQUIRED>
+<!ATTLIST fichier name CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>

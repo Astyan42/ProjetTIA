@@ -89,11 +89,6 @@ public class ConnexionController extends Ressource {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-
-
-
-
-
         }
     }
 }

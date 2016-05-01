@@ -62,4 +62,13 @@ public class ProjectService {
         }
 
     }
+
+    public boolean removeProject(String pseudo, int fileId) {
+        User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        Project project = ProjectRepository.getInstance().getProjectById(String.valueOf(fileId));
+        if(ProjectAccessRepository.getInstance().isAdmin(user,project)){
+            return ProjectRepository.getInstance().removeProjectById(fileId);
+        }
+        return false;
+    }
 }

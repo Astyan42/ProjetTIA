@@ -163,8 +163,6 @@ public class FileRepository extends DefaultRepository{
             preparedStatement.setInt(2, projectId);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-
-            ArrayList<String> resultArray;
             while (resultSet.next()){
                 int idFic=resultSet.getInt(1);
                 int idProject=resultSet.getInt(2);

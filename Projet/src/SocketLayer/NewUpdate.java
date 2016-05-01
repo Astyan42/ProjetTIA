@@ -32,9 +32,18 @@ public class NewUpdate implements Runnable {
             switch (Insert.get(0)){
                 case "projet":
                     pseudo = Insert.get(2);
-                    idProjet = Insert.get(3);
-                    name=Insert.get(4);
-                    oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, Integer.parseInt(idProjet)));
+
+                    switch(Insert.get(1)){
+                        case "add":
+                            idProjet = Insert.get(3);
+                            name=Insert.get(4);
+                            oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, Integer.parseInt(idProjet)));
+                            break;
+                        case "remove":
+                            int fileId = Integer.parseInt(Insert.get(3));
+                            oos.writeBoolean(ProjectService.getInstance().removeProject(pseudo,fileId));
+                    }
+
                     break;
                 case "fichier":
                     pseudo = Insert.get(2);

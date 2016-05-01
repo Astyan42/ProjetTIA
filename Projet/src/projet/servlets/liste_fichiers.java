@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import DAL.FileRepository;
 import Services.ArborescenceService;
+import Services.ProjectService;
 import projet.beans.Utilisateur;
 
 /**
@@ -28,6 +29,7 @@ public class liste_fichiers extends HttpServlet {
 	public static final String ATT_REQUETE_FICHIERS = "liste_fichiers";
 	public static final String VUE = "/Site/Mes_fichiers.jsp";
 	private String father = "/";
+	private String ret = "";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -65,7 +67,7 @@ public class liste_fichiers extends HttpServlet {
 
 		HttpSession session = request.getSession();
 
-		if(request.getParameter("retour")!=null){
+		if(request.getParameter("ret")!=null){
 
 		}
 

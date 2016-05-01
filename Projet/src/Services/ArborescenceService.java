@@ -53,7 +53,7 @@ public class ArborescenceService {
         String file = "";
 
         file+="<?xml version=\"1.0\"?>\n" +
-                "<!DOCTYPE arborescence SYSTEM \"dtd_arborescence.dtd\">\n" +
+                //"<!DOCTYPE arborescence SYSTEM \"dtd_arborescence.dtd\">\n" +
                 "<arborescence>\n" +
                 "<projet idp=\"0\" name=\"/\">\n";
 

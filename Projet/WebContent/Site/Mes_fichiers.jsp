@@ -19,24 +19,24 @@
 		<div id="menu">
 			<div>
 				<div class="add"></div>
-				<a href=""> Fichier</a>
+				<a href="/AddFichier"> Fichier</a>
 			</div>
 			<br>
 			<div>
 				<div class="add"></div>
-				<a href=""> Projet</a>
+				<a href="/AddFichier"> Projet</a>
 			</div>
 			<br>
 			<div>
 				<div class="partage"></div>
-				<a href=""> Partage</a>
+				<a href="/AddCollab"> Partage</a>
 			</div>
 		</div>
 		<div id="contenu">
 
 			<div id="chemin">
 				<form action="/liste_fichier" method="post">
-					<input type="submit" id="retour" name="retour">
+					<input type="submit" id="retour" name="retour" int="${ret}">
 				</form>
 
 				Racine
