@@ -15,7 +15,7 @@ public class FileContextService {
 
     private FileContextService(String fileId) {
         this.fileModel = FileRepository.getInstance().getFileById(fileId);
-        this.fileIO = new java.io.File("../"+this.fileModel.path);
+        this.fileIO = new java.io.File(this.fileModel.path);
         String temp = "";
         try {
             temp = this.readFile(this.fileIO);
@@ -31,7 +31,7 @@ public class FileContextService {
 
     // The instance file
     private final File fileModel;
-    private final int MODIFICATION_COUNT_BETWEEN_SAVES=10;
+    private final int MODIFICATION_COUNT_BETWEEN_SAVES=0;
     private int modificationsUntilNextUpdate = MODIFICATION_COUNT_BETWEEN_SAVES;
     // fileContent must be persisted every x modifications
     private java.io.File fileIO;

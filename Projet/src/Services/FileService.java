@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class FileService {
-
     private static FileService _instance;
 
     public static FileService getInstance() {
@@ -24,13 +23,14 @@ public class FileService {
     public Integer addFile(String pseudo, String idProjet, String name) {
         File file = FileRepository.getInstance().add_file(idProjet, name);
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
+        new java.io.File(System.getProperty("user.home")+"/fichiers").getAbsolutePath();
         if (file!=null){
             FileAccessRepository.getInstance().InsertAdminAccess(file, user);
             try {
                 // BUG dans le cas de la création de deux fichiers avec un même nom
-                new java.io.File("fichiers").mkdir();
-                BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File("fichiers/"+file.name)));
-                writer.write("");
+                new java.io.File(System.getProperty("user.home")+"/fichiers").mkdir();
+                BufferedWriter writer = new BufferedWriter(new FileWriter(new java.io.File(file.path)));
+                writer.write(" ");
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();

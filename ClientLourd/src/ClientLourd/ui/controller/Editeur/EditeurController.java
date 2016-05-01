@@ -33,6 +33,7 @@ public class EditeurController extends Ressource implements Serializable {
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
+    private int pos=0;
     // webSocket
     private final String uri="ws://localhost:7070/Editeur";
     private Session session;
@@ -48,10 +49,10 @@ public class EditeurController extends Ressource implements Serializable {
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
         }
-        sendMessage(name);
         editeur = new Editeur(name,content,commentaires);
         initComponent();
         initController();
+        sendMessage(name);
         initListener();
         new ChatController();
     }
@@ -75,8 +76,11 @@ public class EditeurController extends Ressource implements Serializable {
 
     @OnMessage
     public void onMessage(String message, Session session){
-
-        System.out.println("Message Received :\n" + message);editorPane1.setText(message);
+        if (!message.equals(null)){
+            System.out.println("Message Received :\n" + message);
+            editorPane1.setText(message);
+            editorPane1.setCaretPosition(pos+1);
+        }
     }
 
     public void sendMessage(String message){
@@ -95,10 +99,12 @@ public class EditeurController extends Ressource implements Serializable {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                int pos = editorPane1.getCaretPosition();
                 char c = e.getKeyChar();
+                pos = editorPane1.getCaretPosition();
                 String array = pos+"-"+c;
-                sendMessage(array);
+                if(c!=Character.MIN_VALUE){
+                    sendMessage(array);
+                }
             }
 
             @Override
