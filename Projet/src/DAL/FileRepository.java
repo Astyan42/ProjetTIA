@@ -79,14 +79,14 @@ public class FileRepository extends DefaultRepository{
             preparedStatement.setInt(1, fatherId);
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
-                int id = resultSet.getInt(1);
-                int projectId = resultSet.getInt(2);
-                String name = resultSet.getString(3);
-                String filePath = resultSet.getString(4);
-                file = new File(id,projectId,name,filePath);
-                if (file!=null){
-                    childs.add(file);
+            if (!resultSet.wasNull()){
+                while(resultSet.next()){
+                    int id = resultSet.getInt(1);
+                    int projectId = resultSet.getInt(2);
+                    String name = resultSet.getString(3);
+                    String filePath = resultSet.getString(4);
+                    file = new File(id,projectId,name,filePath);
+                    if (file!=null){childs.add(file);}
                 }
             }
 

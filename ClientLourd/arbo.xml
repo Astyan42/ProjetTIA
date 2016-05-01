@@ -14,6 +14,8 @@
 		</projet>
 		<fichier idf="13" name="pauline"/>
  	</projet>
+	<projet idp="10" name="fee">
+	</projet>
 	<fichier idf="16" name="blabla"/>
  	<fichier idf="17" name="erf"/>
  	<fichier idf="18" name="gregre"/>

@@ -31,9 +31,9 @@ public class NewUpdate implements Runnable {
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             switch (Insert.get(0)){
                 case "projet":
-                    pseudo = Insert.get(1);
-                    idProjet = Insert.get(2);
-                    name=Insert.get(3);
+                    pseudo = Insert.get(2);
+                    idProjet = Insert.get(3);
+                    name=Insert.get(4);
                     oos.writeObject(ProjectService.getInstance().add_project(pseudo, name, Integer.parseInt(idProjet)));
                     break;
                 case "fichier":
@@ -59,11 +59,12 @@ public class NewUpdate implements Runnable {
                     boolean admin;
                     switch (Insert.get(1)){
                         case "show":
+                            int ID = Integer.parseInt(id);
                             if(type.equals("projet")){
-                                oos.writeObject(ProjectService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
+                                oos.writeObject(ProjectService.getInstance().getCollaborators(pseudo, ID));
                             }
                             if(type.equals("fichier")){
-                                oos.writeObject(FileService.getInstance().getCollaborators(pseudo, Integer.parseInt(id)));
+                                oos.writeObject(FileService.getInstance().getCollaborators(pseudo, ID));
                             }
                             break;
 

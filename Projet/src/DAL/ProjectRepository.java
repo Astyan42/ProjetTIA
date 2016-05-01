@@ -85,15 +85,17 @@ public class ProjectRepository extends DefaultRepository{
         Project file = null;
         ArrayList<Project> childs = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM projet WHERE id_projet=?;");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM projet WHERE id_pere=?;");
             preparedStatement.setInt(1, projectId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
-                int id = resultSet.getInt(1);
-                String nom = resultSet.getString(2);
-                int id_pere = resultSet.getInt(3);
-                file = new Project(id,nom,id_pere);
-                if (file!=null) childs.add(file);
+            if(!resultSet.wasNull()){
+                while(resultSet.next()){
+                    int id = resultSet.getInt(1);
+                    String nom = resultSet.getString(2);
+                    int id_pere = resultSet.getInt(3);
+                    file = new Project(id,nom,id_pere);
+                    if (file!=null) childs.add(file);
+                }
             }
         }
         catch(Exception e){

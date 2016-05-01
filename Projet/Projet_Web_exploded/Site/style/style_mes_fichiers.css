@@ -57,6 +57,8 @@ body{
 	background-size: 100%;
 	vertical-align: middle;
 }
+
+.file:not(div[class*="."]){background-image: url("./graph/txt.png");}
 div[class$=".txt"]{background-image: url("./graph/txt.png");}
 div[class$=".css"]{background-image: url("./graph/css.png");}
 div[class$=".xml"]{background-image: url("./graph/xml.png");}
@@ -99,6 +101,12 @@ div[class$=".html"]{background-image: url("./graph/html.png");}
 	margin-bottom: 20px
 }
 #retour{
+	    margin: 0;
+	    padding: 0;
+	    line-height: 100%; /* Si ça fonctionne pas mets 0 */
+	    border: 0;
+	    background: none; /* ou transparent je sais plus... */
+	    text-decoration: underline; /* Normalement */
 	margin-right: 20px;
 	display: inline-block;
 	height:20px;width: 20px;

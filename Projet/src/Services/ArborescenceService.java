@@ -9,6 +9,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class ArborescenceService {
     private static ArborescenceService _instance;
@@ -20,24 +22,24 @@ public class ArborescenceService {
         return _instance;
     }
 
-    public ArrayList<String> getChildFiles(String mail,String name){
-        ArrayList<String> result = new ArrayList<>();
+    public HashMap<Integer,String> getChildFiles(String mail, String name){
+        HashMap<Integer,String> result = new HashMap<>();
         User user=UserRepository.getInstance().getUserByNameOrMail(mail);
         Project father = ProjectRepository.getInstance().getProjectByName(name);
         for(File file:FileRepository.getInstance().getFilesById(father.id_projet)){
             if (FileAccessRepository.getInstance().isAccess(user,file.id))
-                result.add(file.name);
+                result.put(file.id,file.name);
         }
         return result;
     }
 
-    public ArrayList<String> getChildProject(String mail,String name){
-        ArrayList<String> result = new ArrayList<>();
+    public HashMap<Integer,String> getChildProject(String mail,String name){
+        HashMap<Integer,String> result = new HashMap<Integer,String>();
         User user=UserRepository.getInstance().getUserByNameOrMail(mail);
         Project father = ProjectRepository.getInstance().getProjectByName(name);
         for(Project project : ProjectRepository.getInstance().getProjectsById(father.id_projet)){
             if (ProjectAccessRepository.getInstance().isAccess(user,project.id_projet))
-                result.add(project.nom);
+                result.put(project.id_projet,project.nom);
         }
         return result;
     }

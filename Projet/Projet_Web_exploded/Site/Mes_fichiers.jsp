@@ -35,14 +35,17 @@
 		<div id="contenu">
 
 			<div id="chemin">
-				<div id="retour"></div>
+				<form action="/liste_fichier" method="post">
+					<input type="submit" id="retour" name="retour">
+				</form>
+
 				Racine
 			</div>
 
 			<c:forEach var="projet" items="${liste_projets}">
 				<div class="blocfic">
 					<div class="file folder"></div>
-					<a href="Projet?id=${projet.key}" class="fic">${projet.value}</a>
+					<a href="liste_fichiers?father=${projet.value}" class="fic">${projet.value}</a>
 				</div>
 			</c:forEach>
 

@@ -7,7 +7,7 @@
 			<li><a href="#">FAQ</a></li>
 			<c:if test="${!empty sessionScope.sessionUtilisateur}"
 				var="maVariable" scope="session">
-				<li><a href="liste_fichiers">Mes Fichiers</a></li>
+				<li><a href="liste_fichiers?father=root">Mes Fichiers</a></li>
 			</c:if>
 		</ul>
 		<c:choose>

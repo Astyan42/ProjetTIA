@@ -2,7 +2,9 @@ package projet.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.StringJoiner;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,16 +43,16 @@ public class liste_fichiers extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		Utilisateur user=(Utilisateur)session.getAttribute(ATT_SESSION_USER);
-		if(!((String) request.getAttribute("father")).equals("root")){
-			father = (String) request.getAttribute("father");
-		}else father="/";
-		String message = "";
+		father=request.getParameter("father");
+		if(father.equals("root"))father="/";
 		ArrayList<String> messages = new ArrayList<>();
-		messages.add("ff");
-		messages.add("ff");
-		request.setAttribute(ATT_REQUETE_PROJETS, ArborescenceService.getInstance().getChildProject(user.getEmail(),father));
-		request.setAttribute(ATT_REQUETE_FICHIERS, ArborescenceService.getInstance().getChildFiles(user.getEmail(),father));
-        request.setAttribute( "messages", messages );
+		HashMap<Integer, String> projects = ArborescenceService.getInstance().getChildProject(user.getEmail(), father);
+		HashMap<Integer, String> files = ArborescenceService.getInstance().getChildFiles(user.getEmail(),father);
+
+		if (projects!=null)request.setAttribute(ATT_REQUETE_PROJETS, projects);
+		if (files!=null) request.setAttribute(ATT_REQUETE_FICHIERS, files);
+
+		request.setAttribute( "messages", messages );
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}
 
@@ -60,6 +62,13 @@ public class liste_fichiers extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+
+		HttpSession session = request.getSession();
+
+		if(request.getParameter("retour")!=null){
+
+		}
+
 	}
 
 }
