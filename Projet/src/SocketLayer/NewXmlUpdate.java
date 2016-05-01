@@ -19,7 +19,7 @@ public class NewXmlUpdate implements Runnable {
         try {
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
             String pseudo = (String) ois.readObject();
-            String XML = ArborescenceService.getInstance().getArbo(pseudo);
+            String XML = ArborescenceService.getInstance().getArboXml(pseudo);
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             oos.writeObject(XML);
             oos.flush();

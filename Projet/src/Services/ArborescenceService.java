@@ -1,8 +1,6 @@
 package Services;
 
-import DAL.FileRepository;
-import DAL.ProjectRepository;
-import DAL.UserRepository;
+import DAL.*;
 import Model_Objects.File;
 import Model_Objects.Project;
 import Model_Objects.User;
@@ -22,7 +20,29 @@ public class ArborescenceService {
         return _instance;
     }
 
-    public String getArbo(String pseudo){
+    public ArrayList<String> getChildFiles(String mail,String name){
+        ArrayList<String> result = new ArrayList<>();
+        User user=UserRepository.getInstance().getUserByNameOrMail(mail);
+        Project father = ProjectRepository.getInstance().getProjectByName(name);
+        for(File file:FileRepository.getInstance().getFilesById(father.id_projet)){
+            if (FileAccessRepository.getInstance().isAccess(user,file.id))
+                result.add(file.name);
+        }
+        return result;
+    }
+
+    public ArrayList<String> getChildProject(String mail,String name){
+        ArrayList<String> result = new ArrayList<>();
+        User user=UserRepository.getInstance().getUserByNameOrMail(mail);
+        Project father = ProjectRepository.getInstance().getProjectByName(name);
+        for(Project project : ProjectRepository.getInstance().getProjectsById(father.id_projet)){
+            if (ProjectAccessRepository.getInstance().isAccess(user,project.id_projet))
+                result.add(project.nom);
+        }
+        return result;
+    }
+
+    public String getArboXml(String pseudo){
         User user = UserRepository.getInstance().getUserByNameOrMail(pseudo);
         ArrayList<File> files = FileRepository.getInstance().getFilesProjectForUser(user.id, 0);
         ArrayList<File> filesRoot = FileRepository.getInstance().getFilesRootForUser(user.id);
@@ -50,11 +70,9 @@ public class ArborescenceService {
         System.out.println(file);
         return file;
     }
-
     private String XmlWriteProjectRoot(String file, ArrayList<Project> table, int idPere, int user) {
         return XmlWriteProjectRootRec(file,table,idPere,1,user);
     }
-
     private String XmlWriteProjectRootRec(String file, ArrayList<Project> table, int idPere, int indent, int user) {
         ArrayList<Project>tablePere = new ArrayList<>();
         String indentS=repeat(indent,"\t");
@@ -71,7 +89,6 @@ public class ArborescenceService {
         }
         return file;
     }
-
     private String XmlWriteProject(String file, ArrayList<Project> table, int idPere, int user) {
         return XmlWriteProjectRec(file,table,idPere,1,user);
     }

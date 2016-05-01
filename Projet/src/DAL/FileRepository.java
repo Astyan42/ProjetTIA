@@ -68,6 +68,37 @@ public class FileRepository extends DefaultRepository{
             return file;
 
     }
+
+    public ArrayList<File> getFilesById(int fatherId) {
+        Connection connection = this.getConnection();
+        File file = null;
+
+        ArrayList<File> childs =new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM fichier WHERE id_projet=?;");
+            preparedStatement.setInt(1, fatherId);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int id = resultSet.getInt(1);
+                int projectId = resultSet.getInt(2);
+                String name = resultSet.getString(3);
+                String filePath = resultSet.getString(4);
+                file = new File(id,projectId,name,filePath);
+                if (file!=null){
+                    childs.add(file);
+                }
+            }
+
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return childs;
+
+    }
+
     public File getFileByName(String fileName) {
         Connection connection = this.getConnection();
         File file = null;

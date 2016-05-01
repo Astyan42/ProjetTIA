@@ -20,7 +20,7 @@
 			<p id="titre">Titre du fichier</p>
 			<form method="POST" action="Enregistrer_fichier">
 				<textarea type="textarea" class="form-control" id="texte_fichier"
-					placeholder="Contenu Fichier" name="message" id="message">Contenu Fichier</textarea>
+					placeholder="Contenu Fichier" name="message" class="message">Contenu Fichier</textarea>
 				<input class="btn btn-info" type="submit" name="submit"
 					value="Sauvegardez" id="envoi_fichier" />
 			</form>
@@ -29,7 +29,7 @@
 			<div id="chat">
 				<div id="zone_chat"></div>
 				<form class="form-inline" method="POST" action="">
-					<input class="form-control" placeholder="Votre Message" name="message" id="message" /> 
+					<input class="form-control" placeholder="Votre Message" name="message" class="message" />
 					<input class="btn btn-info" type="submit" name="submit" value="Envoyez" id="envoi" />
 				</form>
 

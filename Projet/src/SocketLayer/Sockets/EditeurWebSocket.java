@@ -5,10 +5,7 @@ import Services.FileContextService;
 import jdk.nashorn.internal.objects.NativeJSON;
 
 import javax.servlet.ServletContext;
-import javax.websocket.EncodeException;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.File;
 import java.io.IOException;
@@ -78,4 +75,5 @@ public class EditeurWebSocket {
                 break;
         }
     }
+
 }

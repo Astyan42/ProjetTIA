@@ -7,21 +7,24 @@ import Model_Objects.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ProjectAccessRepository extends DefaultRepository{
-    private ProjectAccessRepository(){
-        
+public class ProjectAccessRepository extends DefaultRepository {
+    private ProjectAccessRepository() {
+
     }
+
     private static ProjectAccessRepository _instance;
+
     public static ProjectAccessRepository getInstance() {
-        if(_instance == null){
+        if (_instance == null) {
             _instance = new ProjectAccessRepository();
         }
         return _instance;
     }
 
-    public void InsertAdminAccess(Project p, User u){
+    public void InsertAdminAccess(Project p, User u) {
         Connection connection = this.getConnection();
         User user = null;
         PreparedStatement preparedStatement = null;
@@ -30,25 +33,23 @@ public class ProjectAccessRepository extends DefaultRepository{
             preparedStatement.setString(1, String.valueOf(p.id_projet));
             preparedStatement.setString(2, String.valueOf(u.id));
             int resultat = preparedStatement.executeUpdate();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void InsertAccess(Project p, User u, boolean read, boolean isAdmin){
+    public void InsertAccess(Project p, User u, boolean read, boolean isAdmin) {
         Connection connection = this.getConnection();
         User user = null;
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement( "INSERT INTO acces_projet (id_projet,id_util,admin,lecture) VALUES (?,?,?,?);");
+            preparedStatement = connection.prepareStatement("INSERT INTO acces_projet (id_projet,id_util,admin,lecture) VALUES (?,?,?,?);");
             preparedStatement.setInt(1, p.id_projet);
             preparedStatement.setInt(2, u.id);
             preparedStatement.setBoolean(3, isAdmin);
             preparedStatement.setBoolean(4, read);
             preparedStatement.executeUpdate();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -69,14 +70,13 @@ public class ProjectAccessRepository extends DefaultRepository{
             while (resultSet.next()) {
                 result.add(resultSet.getString(1));
             }
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
 
-    public boolean isAdmin(User u, Project p){
+    public boolean isAdmin(User u, Project p) {
         PreparedStatement preparedStatement;
         try {
             preparedStatement = this.getConnection().prepareStatement("SELECT admin from acces_projet where id_util=? And id_projet=?");
@@ -91,8 +91,7 @@ public class ProjectAccessRepository extends DefaultRepository{
                 }
             }
             return false;
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -105,8 +104,7 @@ public class ProjectAccessRepository extends DefaultRepository{
             preparedStatement.setInt(1, project.id_projet);
             preparedStatement.setInt(2, selected.id);
             preparedStatement.executeUpdate();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -120,10 +118,32 @@ public class ProjectAccessRepository extends DefaultRepository{
             preparedStatement.setInt(3, project.id_projet);
             preparedStatement.setInt(4, selected.id);
             preparedStatement.executeUpdate();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
+
+    public boolean isAccess(User user, int id_projet) {
+        PreparedStatement preparedStatement;
+
+        try {
+            preparedStatement = this.getConnection().prepareStatement("SELECT lecture from acces_projet where id_util=? And id_projet=?");
+            preparedStatement.setString(1, String.valueOf(user.id));
+            preparedStatement.setString(2, String.valueOf(id_projet));
+            int testDroit;
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                testDroit = resultSet.getInt(1);
+                if (testDroit != 0) {
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

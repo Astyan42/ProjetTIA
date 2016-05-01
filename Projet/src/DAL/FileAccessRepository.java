@@ -97,6 +97,28 @@ public class FileAccessRepository extends DefaultRepository{
         }
     }
 
+    public Boolean isAccess(User u, int fileId){
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = this.getConnection().prepareStatement("SELECT droit_lecture from droit_fichier where id_util=? And id_fichier=?");
+            preparedStatement.setString(1, String.valueOf(u.id));
+            preparedStatement.setString(2, String.valueOf(fileId));
+            int testDroit;
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                testDroit = resultSet.getInt(1);
+                if (testDroit != 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 
     public void RemoveAccess(File file, User selected) {
         PreparedStatement preparedStatement;

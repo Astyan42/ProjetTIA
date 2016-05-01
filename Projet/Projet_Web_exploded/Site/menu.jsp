@@ -3,7 +3,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="Index"><span class="glyphicon glyphicon-home"></span>
 					Accueil</a></li>
-			<li><a href="#">Présentation</a></li>
+			<li><a href="#">Prï¿½sentation</a></li>
 			<li><a href="#">FAQ</a></li>
 			<c:if test="${!empty sessionScope.sessionUtilisateur}"
 				var="maVariable" scope="session">
@@ -13,7 +13,7 @@
 		<c:choose>
 			<c:when test="${!empty sessionScope.sessionUtilisateur}">
 				<a id="button_deconnexion" href="Deconnexion"
-					class="button_menu btn btn-danger pull-right">Déconnexion</a>
+					class="button_menu btn btn-danger pull-right">Dï¿½connexion</a>
 				<a id="button_compte" href="Compte"
 					class="button_menu btn btn-primary pull-right">${sessionScope.sessionUtilisateur.email}</a>
 			</c:when>

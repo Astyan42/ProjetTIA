@@ -61,6 +61,47 @@ public class ProjectRepository extends DefaultRepository{
         }
         return file;
     }
+    public Project getProjectByName(String name) {
+        Connection connection = this.getConnection();
+        Project file = null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM projet WHERE nom=?;");
+            preparedStatement.setString(1, name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            int id = resultSet.getInt(1);
+            String nom = resultSet.getString(2);
+            int id_pere = resultSet.getInt(3);
+            file = new Project(id,nom,id_pere);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return file;
+    }
+
+    public ArrayList<Project> getProjectsById(int projectId) {
+        Connection connection = this.getConnection();
+        Project file = null;
+        ArrayList<Project> childs = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM projet WHERE id_projet=?;");
+            preparedStatement.setInt(1, projectId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int id = resultSet.getInt(1);
+                String nom = resultSet.getString(2);
+                int id_pere = resultSet.getInt(3);
+                file = new Project(id,nom,id_pere);
+                if (file!=null) childs.add(file);
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return childs;
+    }
+
     public ArrayList<Project> getProjectsRootForUser(int userId){
         Connection connection = this.getConnection();
         ArrayList<Project> arrayList= new ArrayList<>();
