@@ -24,6 +24,8 @@ public class ChatController extends Ressource {
     private Session session;
 
     public ChatController(String filename) {
+        initComponent();
+        initListeners();
         try {
             WebSocketContainer container= ContainerProvider.getWebSocketContainer();
             session = container.connectToServer(this , new URI(uri+filename));
@@ -31,8 +33,6 @@ public class ChatController extends Ressource {
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
         }
-        initComponent();
-        initListeners();
     }
     @OnOpen
     public void onOpen(Session session){

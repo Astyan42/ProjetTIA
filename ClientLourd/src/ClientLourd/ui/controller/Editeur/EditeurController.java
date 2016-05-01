@@ -37,11 +37,16 @@ public class EditeurController extends Ressource implements Serializable {
     // webSocket
     private final String uri="ws://localhost:7070/Editeur/";
     private Session session;
-    
+    private int actionkey = 0;
+
 
     public EditeurController(String name) {
         ArrayList<Com> commentaires=new ArrayList<>();
         String content="";
+        editeur = new Editeur(name,content,commentaires);
+        initComponent();
+        initController();
+        initListener();
         try {
             WebSocketContainer container= ContainerProvider.getWebSocketContainer();
             session = container.connectToServer(this , new URI(uri+name));
@@ -49,11 +54,6 @@ public class EditeurController extends Ressource implements Serializable {
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
         }
-        editeur = new Editeur(name,content,commentaires);
-        initComponent();
-        initController();
-        sendMessage(name);
-        initListener();
     }
 
     private void initComponent() {
@@ -78,7 +78,9 @@ public class EditeurController extends Ressource implements Serializable {
         if (message!=(null)){
             System.out.println("Message Received :\n" + message);
             editorPane1.setText(message);
-            editorPane1.setCaretPosition(pos+1);
+            int newPos = (pos+1)-actionkey;
+            if (newPos<0)newPos=0;
+            editorPane1.setCaretPosition(newPos);
         }
     }
 
@@ -93,17 +95,23 @@ public class EditeurController extends Ressource implements Serializable {
         editorPane1.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-
+                char c = e.getKeyChar();
+                pos = editorPane1.getCaretPosition();
+                String action="-null";
+                actionkey=0;
+                if(e.isActionKey()) {
+                    action ="-"+action;
+                    actionkey=1;
+                }
+                String array = pos+"-"+c+action;
+                if(c!=Character.MIN_VALUE){
+                    sendMessage(array);
+                }
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                char c = e.getKeyChar();
-                pos = editorPane1.getCaretPosition();
-                String array = pos+"-"+c;
-                if(c!=Character.MIN_VALUE){
-                    sendMessage(array);
-                }
+
             }
 
             @Override

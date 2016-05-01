@@ -23,7 +23,7 @@ public class EditerListener extends Ressource implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         new EditeurController(fic);
-        //new ChatController(fic);
+        new ChatController(fic);
     }
 }
 

@@ -17,13 +17,14 @@ public class ChatService {
     private ChatService(String name) {
         this.fileModel = FileRepository.getInstance().getFileByName(name);
         this.messages=new ArrayList<>();
+        messages.add(new Message("chat de "+fileModel.name," Bienvenue sur le Chat Vous pouvez des a présent echanger avec vos collaborateur"));
     }
     public static ChatService getInstance(final String name) {
         return multitons.computeIfAbsent(name, ChatService::new);
     }
 
     public String lastMessage(){
-        return messages.get(messages.size()).toString();
+        return messages.get(messages.size()-1).toString()+'\n';
     }
 
     public void addMessage(String pseudo,String message){

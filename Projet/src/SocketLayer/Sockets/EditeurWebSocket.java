@@ -11,12 +11,15 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 @ServerEndpoint("/Editeur/{file}")
 public class EditeurWebSocket {
     private Session session;
     private FileContextService fcs;
-    private ArrayList<Session> sessions = new ArrayList<>();
+    private static final Set<Session> sessions = Collections.synchronizedSet(new HashSet<Session>());
 
 
     @OnOpen
@@ -34,18 +37,35 @@ public class EditeurWebSocket {
         System.out.println(message+" "+vars.length);
         int pos = Integer.parseInt(vars[0]);
         char c = vars[1].charAt(0);
-        keyboardEvent(pos,c);
-   }
+        if (vars[2]=="action") keyboardAction(pos,c);
+        else keyboardEvent(pos,c);
+        synchronized (sessions){
+            for (Session ses : sessions){
+                if (ses.isOpen())sendSessionMessage(fcs.getFileContent(),ses);
+            }
+        }
 
-    public void sendMessage(String message){
+    }
+
+    public void sendSessionMessage(String message,Session s){
         try {
-            session.getBasicRemote().sendText(message);
+            s.getBasicRemote().sendText(message);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-
-
+    public void sendMessage(String message){
+        try {
+            if (message==null){
+                System.out.println("LE MESSAGE EST NUL ABRUTI");
+            }else{
+                System.out.println(message);
+                session.getBasicRemote().sendText(message);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
     private void keyboardEvent(int pos, char carac) {
         switch (carac){
@@ -55,12 +75,6 @@ public class EditeurWebSocket {
             case 13 :
                 fcs.insertCharacter(pos,'\n');
                 break;
-            case 127:
-                fcs.deleteCharacter(pos,false);
-                break;
-            case 8 :
-                fcs.deleteCharacter(pos,true);
-                break;
             case 32:
                 fcs.insertCharacter(pos,' ');
                 break;
@@ -69,6 +83,31 @@ public class EditeurWebSocket {
                     fcs.insertCharacter(pos, carac);
                 break;
         }
+    }
+
+    private void keyboardAction(int pos, char carac) {
+        switch (carac) {
+            case 9:
+                fcs.insertCharacter(pos, '\t');
+                break;
+            case 13:
+                fcs.insertCharacter(pos, '\n');
+                break;
+            case 127:
+                fcs.deleteCharacter(pos, false);
+                break;
+            case 8:
+                fcs.deleteCharacter(pos, true);
+                break;
+            case 32:
+                fcs.insertCharacter(pos, ' ');
+                break;
+        }
+    }
+
+    @OnClose
+    public void onClose(final Session session){
+        sessions.remove(session);
     }
 
 }
