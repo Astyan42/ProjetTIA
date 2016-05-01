@@ -43,14 +43,14 @@ public class Connexion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String userName = request.getParameter( "connexion_mail" );
-
+        String pass =request.getParameter( "connexion_password" );
       /* Traitement de la requ�te et r�cup�ration du bean en r�sultant */
         Utilisateur utilisateur =new Utilisateur();
         utilisateur.setEmail(request.getParameter( "connexion_mail" ));
         utilisateur.setMotDePasse(request.getParameter( "connexion_password" ));
         /* R�cup�ration de la session depuis la requ�te */
         HttpSession session = request.getSession();
-        if (UserService.getInstance().IsAlreadyRegistered(userName)) {
+        if (UserService.getInstance().Authentication(userName,pass)) {
             session.setAttribute( ATT_SESSION_USER, utilisateur );
 
         } else {

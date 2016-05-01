@@ -54,4 +54,20 @@ public class UserRepository extends DefaultRepository{
         }
         return true;
     }
+
+    public boolean identification(String pseudo, String password){
+        try {
+            PreparedStatement preparedStatement = this.getConnection().prepareStatement("SELECT * FROM  utilisateur WHERE password=? AND (nom=? OR mail=?);");
+
+            preparedStatement.setString( 1, password );
+            preparedStatement.setString( 2, pseudo );
+            preparedStatement.setString( 3, pseudo );
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.wasNull())return false;
+        } catch ( SQLException e ) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }
