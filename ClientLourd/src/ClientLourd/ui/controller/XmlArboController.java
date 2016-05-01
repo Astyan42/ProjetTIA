@@ -4,16 +4,14 @@ import ClientLourd.ui.Ressource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,12 +20,16 @@ public class XmlArboController extends Ressource{
     DocumentBuilderFactory factory;
     DocumentBuilder builder;
     Document doc;
+    Document doc1;
 
-    public XmlArboController(String filename) {
+    public XmlArboController(String xml) {
+
         try {
             factory = DocumentBuilderFactory.newInstance();
             builder = factory.newDocumentBuilder();
-            doc = builder.parse(filename);
+            InputSource is = new InputSource(new StringReader(xml));
+            //doc1 = builder.parse(xml);
+            doc = builder.parse(is);
             factory.setValidating(true);
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();

@@ -72,11 +72,8 @@ public class EventManager extends Ressource {
             ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
 
             String XMLString = (String) ois.readObject();
-            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("arbo.xml")));
-            writer.write(XMLString);
 
-            writer.close();
-            xmlDoc= new XmlArboController("arbo.xml");
+            xmlDoc= new XmlArboController(XMLString);
 
         } catch (IOException | ClassNotFoundException e1) {
             e1.printStackTrace();

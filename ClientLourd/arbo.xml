@@ -2,6 +2,10 @@
 <!DOCTYPE arborescence SYSTEM "dtd_arborescence.dtd">
 <arborescence>
 <projet idp="0" name="/">
+	<projet idp="11" name="eazea">
+		<projet idp="12" name="ezaeazeazeaz">
+		</projet>
+	</projet>
 	<fichier idf="27" name="ici"/>
  </projet>
 </arborescence>

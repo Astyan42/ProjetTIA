@@ -12,8 +12,8 @@ public class Ressource {
     public static XmlArboController xmlDoc;
     public static JLabel arianne;
     public static String pseudo;
-    public static String idProjectHere;
-    public static String ProjectHere;
+    public static String idProjectHere="0";
+    public static String ProjectHere="/";
 
     public final String SERVER_ADRESS = "127.0.0.1";
     public final int PORT_CONNECT= 40400;

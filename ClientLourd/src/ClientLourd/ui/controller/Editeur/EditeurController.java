@@ -95,14 +95,21 @@ public class EditeurController extends Ressource implements Serializable {
         editorPane1.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+
                 char c = e.getKeyChar();
                 pos = editorPane1.getCaretPosition();
-                String action="-null";
+                String action="null";
                 actionkey=0;
                 if(e.isActionKey()) {
-                    action ="-"+action;
+                    action="action";
                     actionkey=1;
+                }if(!editorPane1.getSelectedText().equals("")){
+                    int posStart = editorPane1.getSelectionStart();
+                    int posEnd = editorPane1.getSelectionEnd();
+                    action="select-"+posStart+"-"+posEnd;
+                    pos = posStart;
                 }
+                action ="-"+action;
                 String array = pos+"-"+c+action;
                 if(c!=Character.MIN_VALUE){
                     sendMessage(array);

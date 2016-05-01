@@ -21,6 +21,7 @@ public class MainFrame extends JFrame {
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     public JLabel getFilDArianneLabel() {
