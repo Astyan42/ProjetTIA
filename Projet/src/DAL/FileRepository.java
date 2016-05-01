@@ -32,7 +32,7 @@ public class FileRepository extends DefaultRepository{
             preparedStatement.setString(1, projectId);
 
             preparedStatement.setString(2, fileName);
-            String path =new java.io.File(System.getProperty("user.home")+"/fichiers").getAbsolutePath()+"/"+fileName;
+            String path =new java.io.File(System.getProperty("user.home")+"/fichiers").getAbsolutePath()+"\\"+fileName;
             preparedStatement.setString(3, path);
 
             preparedStatement.executeUpdate();

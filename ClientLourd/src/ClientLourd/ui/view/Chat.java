@@ -14,5 +14,26 @@ public class Chat extends JFrame{
         setVisible(true);
         setSize(500, 300);
         setLocationRelativeTo(null);
+        utilisateur.setSize(80,80);
+    }
+
+    public JList getUtilisateur() {
+        return utilisateur;
+    }
+
+    public JTextPane getChat() {
+        return chat;
+    }
+
+    public JTextArea getNewMessage() {
+        return newMessage;
+    }
+
+    public JButton getEnvoyer() {
+        return envoyer;
+    }
+
+    public JPanel getChatPanel() {
+        return chatPanel;
     }
 }

@@ -37,7 +37,8 @@
               <component id="68c60" class="javax.swing.JTextArea" binding="newMessage">
                 <constraints/>
                 <properties>
-                  <foreground color="-1"/>
+                  <background color="-1"/>
+                  <foreground color="-16711423"/>
                   <minimumSize width="200" height="70"/>
                   <opaque value="false"/>
                   <preferredSize width="200" height="70"/>
@@ -72,20 +73,10 @@
           <component id="fa836" class="javax.swing.JList" binding="utilisateur">
             <constraints/>
             <properties>
-              <maximumSize width="0" height="70"/>
-              <minimumSize width="0" height="70"/>
-              <model>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-                <item value="ut"/>
-              </model>
-              <preferredSize width="0" height="70"/>
+              <maximumSize width="80" height="70"/>
+              <minimumSize width="80" height="70"/>
+              <model/>
+              <preferredSize width="80" height="70"/>
             </properties>
           </component>
         </children>

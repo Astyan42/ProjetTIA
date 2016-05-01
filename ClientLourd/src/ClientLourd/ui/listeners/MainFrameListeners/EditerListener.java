@@ -1,6 +1,7 @@
 package ClientLourd.ui.listeners.MainFrameListeners;
 
 import ClientLourd.ui.Ressource;
+import ClientLourd.ui.controller.Chat.ChatController;
 import ClientLourd.ui.controller.Editeur.EditeurController;
 import ClientLourd.ui.view.Com;
 
@@ -22,6 +23,7 @@ public class EditerListener extends Ressource implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         new EditeurController(fic);
+        //new ChatController(fic);
     }
 }
 

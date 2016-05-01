@@ -2,30 +2,6 @@
 <!DOCTYPE arborescence SYSTEM "dtd_arborescence.dtd">
 <arborescence>
 <projet idp="0" name="/">
-	<projet idp="7" name="il vois">
-		<fichier idf="15" name="azerfge"/>
- 	</projet>
-	<projet idp="1" name="Vialla">
-		<projet idp="2" name="Austiste">
-		</projet>
-		<projet idp="3" name="Clement ne vois pas">
-		</projet>
-		<projet idp="4" name="clement vois">
-		</projet>
-		<fichier idf="13" name="pauline"/>
- 	</projet>
-	<projet idp="10" name="fee">
-	</projet>
-	<fichier idf="16" name="blabla"/>
- 	<fichier idf="17" name="erf"/>
- 	<fichier idf="18" name="gregre"/>
- 	<fichier idf="19" name="fezfz"/>
- 	<fichier idf="20" name="vyvy"/>
- 	<fichier idf="21" name="gyubuiop"/>
- 	<fichier idf="22" name="vtyui"/>
- 	<fichier idf="23" name="dzadza"/>
- 	<fichier idf="24" name="kop"/>
- 	<fichier idf="25" name="plo"/>
- 	<fichier idf="26" name="azerty"/>
+	<fichier idf="27" name="ici"/>
  </projet>
 </arborescence>

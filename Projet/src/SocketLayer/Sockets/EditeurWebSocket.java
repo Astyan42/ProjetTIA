@@ -6,12 +6,13 @@ import jdk.nashorn.internal.objects.NativeJSON;
 
 import javax.servlet.ServletContext;
 import javax.websocket.*;
+import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@ServerEndpoint("/Editeur")
+@ServerEndpoint("/Editeur/{file}")
 public class EditeurWebSocket {
     private Session session;
     private FileContextService fcs;
@@ -19,28 +20,22 @@ public class EditeurWebSocket {
 
 
     @OnOpen
-    public void onOpen(Session session){
+    public void onOpen(Session session , @PathParam("file") final String file){
         System.out.println("nouvelle connexion WS editeur");
         this.session = session;
         sessions.add(session);
+        fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(file).id));
+        sendMessage(fcs.getFileContent());
     }
 
     @OnMessage
     public void onMessage(String message, Session session) {
         String[] vars = message.split("-");
         System.out.println(message+" "+vars.length);
-        if(vars.length==1){
-            fcs = FileContextService.getInstance(String.valueOf(FileRepository.getInstance().getFileByName(vars[0]).id));
-            sendMessage(fcs.getFileContent());
-            return;
-        }
         int pos = Integer.parseInt(vars[0]);
         char c = vars[1].charAt(0);
-
         keyboardEvent(pos,c);
-
-
-    }
+   }
 
     public void sendMessage(String message){
         try {

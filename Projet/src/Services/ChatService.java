@@ -14,12 +14,12 @@ public class ChatService {
     private final File fileModel;
     private ArrayList<Message> messages;
 
-    private ChatService(String fileId) {
-        this.fileModel = FileRepository.getInstance().getFileById(fileId);
+    private ChatService(String name) {
+        this.fileModel = FileRepository.getInstance().getFileByName(name);
         this.messages=new ArrayList<>();
     }
-    public static ChatService getInstance(final String fileId) {
-        return multitons.computeIfAbsent(fileId, ChatService::new);
+    public static ChatService getInstance(final String name) {
+        return multitons.computeIfAbsent(name, ChatService::new);
     }
 
     public String lastMessage(){

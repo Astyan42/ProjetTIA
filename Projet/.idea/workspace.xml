@@ -73,18 +73,66 @@
         <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="16" selection-end-column="35" />
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileContextService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5608974">
+              <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSocketChat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Services/FileService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projet/servlets/Connexion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6851852">
+            <state vertical-scroll-proportion="0.0">
               <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Services/ChatService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,16 +165,16 @@
         <entry file="file://$PROJECT_DIR$/src/DAL/FileRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
               <folding>
-                <marker date="1462112575321" expanded="true" signature="768:841" placeholder="INSERT INTO fichier... " />
-                <marker date="1462112575321" expanded="true" signature="1779:1819" placeholder="SELECT * FRO... fichier" />
-                <marker date="1462112575321" expanded="true" signature="2669:2708" placeholder="SELECT * FRO... fichier" />
-                <marker date="1462112575321" expanded="true" signature="3628:3661" placeholder="SELECT * FRO... fichier" />
-                <marker date="1462112575321" expanded="true" signature="4440:4654" placeholder="SELECT fichi... fichier" />
-                <marker date="1462112575321" expanded="true" signature="5853:6083" placeholder="SELECT fichi... fichier" />
-                <marker date="1462112575321" expanded="true" signature="6925:6965" placeholder="DELETE FROM " />
-                <marker date="1462112575321" expanded="true" signature="7137:7183" placeholder="DELETE FROM " />
+                <marker date="1462121852870" expanded="true" signature="768:841" placeholder="INSERT INTO fichier... " />
+                <marker date="1462121852870" expanded="true" signature="1780:1820" placeholder="SELECT * FRO... fichier" />
+                <marker date="1462121852870" expanded="true" signature="2670:2709" placeholder="SELECT * FRO... fichier" />
+                <marker date="1462121852870" expanded="true" signature="3629:3662" placeholder="SELECT * FRO... fichier" />
+                <marker date="1462121852870" expanded="true" signature="4441:4655" placeholder="SELECT fichi... fichier" />
+                <marker date="1462121852870" expanded="true" signature="5854:6084" placeholder="SELECT fichi... fichier" />
+                <marker date="1462121852870" expanded="true" signature="6926:6966" placeholder="DELETE FROM " />
+                <marker date="1462121852870" expanded="true" signature="7138:7184" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -146,54 +194,6 @@
                 <marker date="1462104739985" expanded="true" signature="4578:4636" placeholder="DELETE FROM " />
                 <marker date="1462104739985" expanded="true" signature="5096:5190" placeholder="UPDATE droit... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Services/ChatService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.259259">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketChat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -254,21 +254,21 @@
         <option value="$PROJECT_DIR$/src/Services/FileContextService.java" />
         <option value="$PROJECT_DIR$/src/DAL/FileAccessRepository.java" />
         <option value="$PROJECT_DIR$/src/DAL/ProjectAccessRepository.java" />
-        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java" />
         <option value="$PROJECT_DIR$/WebContent/Site/Fichier.jsp" />
         <option value="$PROJECT_DIR$/src/SocketLayer/NewUpdate.java" />
         <option value="$PROJECT_DIR$/src/Services/ArborescenceService.java" />
         <option value="$PROJECT_DIR$/WebContent/Site/menu.jsp" />
         <option value="$PROJECT_DIR$/src/DAL/ProjectRepository.java" />
-        <option value="$PROJECT_DIR$/src/DAL/FileRepository.java" />
         <option value="$PROJECT_DIR$/WebContent/Site/Mes_fichiers.jsp" />
         <option value="$PROJECT_DIR$/WebContent/Site/style/style_mes_fichiers.css" />
         <option value="$PROJECT_DIR$/src/projet/servlets/liste_fichiers.java" />
         <option value="$PROJECT_DIR$/src/WebServices/Chat/Message.java" />
-        <option value="$PROJECT_DIR$/src/Services/ChatService.java" />
-        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java" />
         <option value="$PROJECT_DIR$/src/DAL/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/projet/servlets/Connexion.java" />
+        <option value="$PROJECT_DIR$/src/Services/ChatService.java" />
+        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java" />
+        <option value="$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java" />
+        <option value="$PROJECT_DIR$/src/DAL/FileRepository.java" />
       </list>
     </option>
   </component>
@@ -1349,12 +1349,12 @@
       <workItem from="1462041484272" duration="3512000" />
       <workItem from="1462045054037" duration="72000" />
       <workItem from="1462045274584" duration="11045000" />
-      <workItem from="1462101534610" duration="16665000" />
+      <workItem from="1462101534610" duration="20588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192175000" />
+    <option name="totallyTimeSpent" value="196098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1369,7 +1369,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078225" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31078225" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1611,14 +1611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/FileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Services/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1787,76 +1779,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WebServices/Chat/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.259259">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/ChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAL/FileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-          <folding>
-            <marker date="1462112575321" expanded="true" signature="768:841" placeholder="INSERT INTO fichier... " />
-            <marker date="1462112575321" expanded="true" signature="1779:1819" placeholder="SELECT * FRO... fichier" />
-            <marker date="1462112575321" expanded="true" signature="2669:2708" placeholder="SELECT * FRO... fichier" />
-            <marker date="1462112575321" expanded="true" signature="3628:3661" placeholder="SELECT * FRO... fichier" />
-            <marker date="1462112575321" expanded="true" signature="4440:4654" placeholder="SELECT fichi... fichier" />
-            <marker date="1462112575321" expanded="true" signature="5853:6083" placeholder="SELECT fichi... fichier" />
-            <marker date="1462112575321" expanded="true" signature="6925:6965" placeholder="DELETE FROM " />
-            <marker date="1462112575321" expanded="true" signature="7137:7183" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1898,8 +1825,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projet/servlets/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851852">
+        <state vertical-scroll-proportion="0.0">
           <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/EditeurWebSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/ChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocketLayer/Sockets/WebSocketChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/FileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAL/FileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <marker date="1462121852870" expanded="true" signature="768:841" placeholder="INSERT INTO fichier... " />
+            <marker date="1462121852870" expanded="true" signature="1780:1820" placeholder="SELECT * FRO... fichier" />
+            <marker date="1462121852870" expanded="true" signature="2670:2709" placeholder="SELECT * FRO... fichier" />
+            <marker date="1462121852870" expanded="true" signature="3629:3662" placeholder="SELECT * FRO... fichier" />
+            <marker date="1462121852870" expanded="true" signature="4441:4655" placeholder="SELECT fichi... fichier" />
+            <marker date="1462121852870" expanded="true" signature="5854:6084" placeholder="SELECT fichi... fichier" />
+            <marker date="1462121852870" expanded="true" signature="6926:6966" placeholder="DELETE FROM " />
+            <marker date="1462121852870" expanded="true" signature="7138:7184" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Services/FileContextService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5608974">
+          <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
           <folding />
         </state>
       </provider>

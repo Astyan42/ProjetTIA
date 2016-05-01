@@ -35,7 +35,7 @@ public class EditeurController extends Ressource implements Serializable {
 
     private int pos=0;
     // webSocket
-    private final String uri="ws://localhost:7070/Editeur";
+    private final String uri="ws://localhost:7070/Editeur/";
     private Session session;
     
 
@@ -44,7 +44,7 @@ public class EditeurController extends Ressource implements Serializable {
         String content="";
         try {
             WebSocketContainer container= ContainerProvider.getWebSocketContainer();
-            session = container.connectToServer(this , new URI(uri));
+            session = container.connectToServer(this , new URI(uri+name));
 
         } catch (DeploymentException | IOException | URISyntaxException e) {
             e.printStackTrace();
@@ -54,7 +54,6 @@ public class EditeurController extends Ressource implements Serializable {
         initController();
         sendMessage(name);
         initListener();
-        new ChatController();
     }
 
     private void initComponent() {
@@ -76,7 +75,7 @@ public class EditeurController extends Ressource implements Serializable {
 
     @OnMessage
     public void onMessage(String message, Session session){
-        if (!message.equals(null)){
+        if (message!=(null)){
             System.out.println("Message Received :\n" + message);
             editorPane1.setText(message);
             editorPane1.setCaretPosition(pos+1);
