@@ -103,12 +103,13 @@ public class EditeurController extends Ressource implements Serializable {
                 if(e.isActionKey()) {
                     action="action";
                     actionkey=1;
-                }if(!editorPane1.getSelectedText().equals("")){
-                    int posStart = editorPane1.getSelectionStart();
-                    int posEnd = editorPane1.getSelectionEnd();
-                    action="select-"+posStart+"-"+posEnd;
-                    pos = posStart;
                 }
+                //if(!editorPane1.getSelectedText().equals("")){
+                //    int posStart = editorPane1.getSelectionStart();
+                //    int posEnd = editorPane1.getSelectionEnd();
+                //    action="select-"+posStart+"-"+posEnd;
+                //    pos = posStart;
+                //}
                 action ="-"+action;
                 String array = pos+"-"+c+action;
                 if(c!=Character.MIN_VALUE){

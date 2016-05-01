@@ -12,9 +12,6 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 
-/**
- * Created by Anthony on 29/04/2016.
- */
 public class RemoveListener extends Ressource implements ActionListener {
     private String type;
     private int id;

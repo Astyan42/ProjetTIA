@@ -53,22 +53,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RemoveListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RemoveListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/listeners/MainFrameListeners/RemoveListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9158249">
-              <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="19" />
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="23" />
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="23" />
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ressource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/Ressource.java">
+      <file leaf-file-name="JAVA/ClientLourd.ui" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/ClientLourd.ui">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>ClientLourd.ui</OriginalElement>
+              <nodes>
+                <node x="150.0" y="79.0">ClientLourd.ui.EventManager</node>
+                <node x="0.0" y="79.0">ClientLourd.ui.controller</node>
+                <node x="0.0" y="227.0">ClientLourd.ui.view</node>
+                <node x="0.0" y="153.0">ClientLourd.ui.interfaces</node>
+                <node x="148.0" y="227.0">ClientLourd.ui.Runner</node>
+                <node x="175.0" y="153.0">ClientLourd.ui.listeners</node>
+                <node x="92.0" y="0.0">ClientLourd.ui.Ressource</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="ClientLourd.ui.EventManager" target="ClientLourd.ui.Ressource">
+                  <point x="0.0" y="-14.5" />
+                  <point x="204.0" y="54.0" />
+                  <point x="155.75" y="54.0" />
+                  <point x="21.25" y="14.5" />
+                </edge>
+                <edge source="ClientLourd.ui.controller" target="ClientLourd.ui.Ressource">
+                  <point x="0.0" y="-14.5" />
+                  <point x="65.0" y="54.0" />
+                  <point x="113.25" y="54.0" />
+                  <point x="-21.25" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-361.0" y="85.0" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditeurController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="0.5050505">
+              <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,16 +125,6 @@
               <folding>
                 <element signature="e#248#249#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewProjectController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/controller/MainFrame/NewProjectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -184,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/MainFrame/FileListController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/MainFrame/MainFrameController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/MainFrame/FolderListController.java" />
-        <option value="$PROJECT_DIR$/src/ClientLourd/ui/listeners/MainFrameListeners/RemoveListener.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/MainFrame/NewFicController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurWebSocketClient.java" />
         <option value="$USER_HOME$/AppData/Local/Temp/TribeWebSocketTest.java.url" />
@@ -195,11 +228,12 @@
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/listeners/MainFrameListeners/EditerListener.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/Chat/ChatController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/view/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/XmlArboController.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/EventManager.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/Ressource.java" />
         <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/ConnexionController.java" />
+        <option value="$PROJECT_DIR$/src/ClientLourd/ui/listeners/MainFrameListeners/RemoveListener.java" />
+        <option value="$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurController.java" />
       </list>
     </option>
   </component>
@@ -253,6 +287,10 @@
               <option name="myItemId" value="projetTia" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -275,24 +313,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,154 +331,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MainFrameListeners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MainFrame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Editeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collaboration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetTia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClientLourd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1015,16 +887,16 @@
       <workItem from="1462045040387" duration="85000" />
       <workItem from="1462045234065" duration="9800000" />
       <workItem from="1462101475385" duration="20887000" />
-      <workItem from="1462134295676" duration="3453000" />
+      <workItem from="1462134295676" duration="6081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260197000" />
+    <option name="totallyTimeSpent" value="262825000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="898" y="228" width="124" height="583" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1332,6 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,13 +1219,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+          <folding>
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,7 +1256,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1460,9 +1332,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/listeners/MainFrameListeners/RemoveListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9158249">
-          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="19" />
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="23" />
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="23" />
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/ClientLourd.ui">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>ClientLourd.ui</OriginalElement>
+          <nodes>
+            <node x="150.0" y="79.0">ClientLourd.ui.EventManager</node>
+            <node x="0.0" y="79.0">ClientLourd.ui.controller</node>
+            <node x="0.0" y="227.0">ClientLourd.ui.view</node>
+            <node x="0.0" y="153.0">ClientLourd.ui.interfaces</node>
+            <node x="148.0" y="227.0">ClientLourd.ui.Runner</node>
+            <node x="175.0" y="153.0">ClientLourd.ui.listeners</node>
+            <node x="92.0" y="0.0">ClientLourd.ui.Ressource</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="ClientLourd.ui.EventManager" target="ClientLourd.ui.Ressource">
+              <point x="0.0" y="-14.5" />
+              <point x="204.0" y="54.0" />
+              <point x="155.75" y="54.0" />
+              <point x="21.25" y="14.5" />
+            </edge>
+            <edge source="ClientLourd.ui.controller" target="ClientLourd.ui.Ressource">
+              <point x="0.0" y="-14.5" />
+              <point x="65.0" y="54.0" />
+              <point x="113.25" y="54.0" />
+              <point x="-21.25" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-361.0" y="85.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientLourd/ui/controller/Editeur/EditeurController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5050505">
+          <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
